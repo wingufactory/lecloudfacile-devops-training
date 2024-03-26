@@ -13,4 +13,27 @@ Ce repo contiendra 2 branches par defaut : main et develop. Pour apporter des mo
 
 - Apporter vos modifications dans votre branche puis merger vers la branche develop.
 
+
+Steps to get ready:
+
+- cloner le repo
+```
+git clone https://github.com/wingufactory/lecloudfacile-devops-training.git
+
+git checkout -b develop
+
+```
+
+- Installer mkdocs: 
+
+```
+pip install mkdocs
+```
+- Executer le serveur de dev: 
+```
+cd lecloudfacile-devops-training/
+mkdocs serve
+```
+
+
 Cheers.

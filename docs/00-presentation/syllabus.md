@@ -20,7 +20,6 @@ Ces 09 chapitres représentent d'un point de vue statistique:
         <th>58 Cours (1810 min)</th>
         <th>50 Labs (1715 min)</th>
         <th>09 Quizz (135 min)</th>
-        <th style="background: #B8860B; color: white;">Methode: Self-Learning</th>
     </tr>
 </table>
 

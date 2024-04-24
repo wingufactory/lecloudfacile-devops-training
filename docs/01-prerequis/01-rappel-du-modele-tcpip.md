@@ -4,7 +4,6 @@ Le modèle TCP/IP, abréviation de Transmission Control Protocol/Internet Protoc
 
 - Il se base sur un standard non propriétaire et ouvert
 - Il fonctionne sur divers type de réseaux
-- Est composé de quatres couches seulement
 - Donne la possibilité de réexpédier les paquets en cas d'enconbrement 
 
 ## I. Couche Application :

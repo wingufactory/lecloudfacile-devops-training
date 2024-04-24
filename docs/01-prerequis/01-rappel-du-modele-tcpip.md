@@ -2,10 +2,10 @@
 
 Le modèle TCP/IP, abréviation de Transmission Control Protocol/Internet Protocol, est un ensemble de protocoles de communication utilisés pour interconnecter des dispositifs sur des réseaux informatiques. Il divise la communication en couches, offrant ainsi une structure modulaire et flexible pour la transmission de données. Ce modèle comprend quatre couches principales : la couche Application, la couche Transport, la couche Internet et la couche Accès au réseau.
 
-Il se base sur un standard non propriétaire et ouvert
-Il fonctionne sur divers type de réseaux
-Est composé de quatres couches seulement
-donne la possibilité de réexpédier les paquets en cas d'enconbrement 
+- Il se base sur un standard non propriétaire et ouvert
+- Il fonctionne sur divers type de réseaux
+- Est composé de quatres couches seulement
+- Donne la possibilité de réexpédier les paquets en cas d'enconbrement 
 
 ## I. Couche Application :
 

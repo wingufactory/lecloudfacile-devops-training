@@ -55,13 +55,11 @@ Le découpage de sous-réseau est alors utilisé pour partitionner ces réseaux 
 
 ## L'adressage IP
 
+![Adressage IP](../img/ipaddr.png)
+
 Sur un même réseau, chaque ordinateur doit avoir une adresse IP unique
 
-- Une adresse IP (V4) est constitué de 4 octects
-- 1 octet = 1 nombre binaire (1 ou 0, base 2) de 8 bits :
-8 bits = 2puissance 8 = 256 => 1 octet = [0 - 255]
-- Chaque octet est séparé par 1 point 
-image illustration 
+![Adressage IP](../img/ipaddr2.png)
 
 Adresse IP : 192.168.12.5 4 octets en notation décimale [1, 254] car certaines adresses sont réservées 
 Masque de sous-réseau :  255.255.255.0 Le masque de sous-réseau définit combien d'adresse IP sont utilisables pour le réseau 

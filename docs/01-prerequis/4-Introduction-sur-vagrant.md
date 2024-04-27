@@ -131,5 +131,5 @@ Encore une fois, vérifiez bien l’indentation afin de correctement clôturer c
 
 ## Pour plus d'informations
 
-[Get Started]([http://vagrantup.com](https://developer.hashicorp.com/vagrant/tutorials/getting-started?product_intent=vagrant))
-[Documentation officielle](http://vagrantup.com/docs)
+- [Get Started](https://developer.hashicorp.com/vagrant/tutorials/getting-started?product_intent=vagrant)
+- [Documentation officielle](http://vagrantup.com/docs)

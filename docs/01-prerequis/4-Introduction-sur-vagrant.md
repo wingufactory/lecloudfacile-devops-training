@@ -129,7 +129,7 @@ v.memory = la variable de mémoire RAM déclarée plus haut, ici 2GB de RAM.
 Encore une fois, vérifiez bien l’indentation afin de correctement clôturer chaque bloc de configuration par un end sinon vous aurez une erreur de syntaxe remontée par la commande vagrant validate.
 
 
-Pour plus d'informations
+## Pour plus d'informations
 
-[vagrantup.com](http://vagrantup.com)
-[vagrantup.com/docs](http://vagrantup.com/docs)
+[Get Started]([http://vagrantup.com](https://developer.hashicorp.com/vagrant/tutorials/getting-started?product_intent=vagrant))
+[Documentation officielle](http://vagrantup.com/docs)

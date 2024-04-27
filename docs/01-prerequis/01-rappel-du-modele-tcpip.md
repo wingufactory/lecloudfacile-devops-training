@@ -61,11 +61,32 @@ Sur un même réseau, chaque ordinateur doit avoir une adresse IP unique
 
 ![Adressage IP](../img/ipaddr2.png)
 
-Adresse IP : 192.168.12.5 4 octets en notation décimale [1, 254] car certaines adresses sont réservées 
-Masque de sous-réseau :  255.255.255.0 Le masque de sous-réseau définit combien d'adresse IP sont utilisables pour le réseau 
-partie fixe et part modifiable
-adresse réseau & adresse des ordinateurs
-partie fix de l'ip  partie modifiable de l'ip
+add 3rd image
+![Adressage IP](../img/ipaddr2.png)
+
+Nous pouvons représenté le masque de sous réseau d'une autre manière : 192.168.12.0/24
+24 étant le nombre de bit à 1 du masque de sous-réseau en partant de la gauche
+Exemple d'autre masque fréquement utiliser : 
+/24 255.255.255.0 /16 255.255.0.0 /8 255.0.0.0
+
+Il faut noter qu'il y a des adresses à ne pas utiliser !!! -add warning
+
+L'adresse du Réseau 192.168.2.0 dans notre exemple
+L'adresse de Broadcast 192.168.2.255 utiliser pour envoyer des message réseau à toutes les machines connectées
+L'adresse de Loopback 127.0.0.1 boucle locale, localhost
+
+### Classes d'adresse IP
+
+les réseaux IP sont répertoriés en 3 classes :
+
+***Classe A*** : 1.0.0.0 à 172.0.0.0 /8  Masque 255.0.0.0
+ici nous avons un nombre réduit de réseaux mais un nombre important de machines
+
+***Classe B*** : 128.0.0.0 à 191.254.0.0 16 Masque 255.255.0.0
+Ici nous avons autant de réseaux que de machines
+
+***Classe C*** : 192.0.0.0 à 223.254.254.0 24 Masque 255.255.255.0
+Ici nous avons un nombre important de sous-réseaux mais un nombre limité de machines
 
 ## le routage IP
 

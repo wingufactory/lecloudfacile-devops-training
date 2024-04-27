@@ -66,7 +66,36 @@ Il utilise le chiffrement pour brouiller les données qui traversent la connexio
 La tunnellisation permet de faire transiter un paquet à travers un réseau en utilisant un protocole ou un itinéraire qu’il ne pourrait normalement pas emprunter.
 Les tunnels SSH utilisent la redirection de port pour transférer des paquets d’une machine à l’autre.
 En résumé, le SSH est essentiel pour la communication sécurisée entre les ordinateurs, que ce soit pour gérer des serveurs à distance ou pour transférer des fichiers. 🔒🌐
+Quelques exemples d'utilisations :
+--
+Connexion à un hôte distant :
+Utilisez la commande ssh pour vous connecter à un serveur distant. Par exemple :
+ssh -p 22 user@remote_server
 
+Cela vous permettra d’accéder à la ligne de commande du serveur distant.
+Transfert de fichiers sécurisé :
+Utilisez scp (Secure Copy Protocol) pour copier des fichiers entre votre machine locale et un serveur distant. Par exemple :
+scp local_file.txt user@remote_server:/path/to/destination
+
+Tunnel SSH (Port Forwarding) :
+Créez un tunnel SSH pour rediriger le trafic d’un port local vers un port distant. Par exemple :
+ssh -L 8080:localhost:80 user@remote_server
+
+Cela permet d’accéder à un service web distant via http://localhost:8080.
+Exécution de commandes à distance :
+Utilisez ssh pour exécuter des commandes sur un serveur distant sans ouvrir une session interactive. Par exemple :
+ssh user@remote_server "ls -l /path/to/files"
+
+Copie de clés SSH :
+Utilisez ssh-copy-id pour copier votre clé publique sur un serveur distant. Cela facilite l’authentification sans mot de passe.
+Transfert de dossiers :
+Utilisez rsync avec SSH pour copier des dossiers complets entre votre machine locale et un serveur distant. Par exemple :
+rsync -avz -e ssh local_folder/ user@remote_server:/path/to/destination
+
+Exécution de commandes distantes en arrière-plan :
+Utilisez nohup avec ssh pour exécuter des commandes sur un serveur distant même après la déconnexion. Par exemple :
+ssh user@remote_server "nohup long_running_command &"
+--
 ## Protocole SMTP (Simple Mail Transfer Protocol)
 Le protocole Simple Mail Transfer Protocol (SMTP) est un élément essentiel pour l’envoi de messages électroniques sur Internet. 
 Son rôle principal est de mettre en place des règles de communication entre les serveurs. Il permet aux serveurs de se reconnaître, d’annoncer le type de communication qu’ils tentent d’établir, et de gérer les erreurs telles que les adresses électroniques incorrectes.

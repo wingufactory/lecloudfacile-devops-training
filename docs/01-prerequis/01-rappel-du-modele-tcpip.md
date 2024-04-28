@@ -61,15 +61,14 @@ Sur un même réseau, chaque ordinateur doit avoir une adresse IP unique
 
 ![Adressage IP](../img/ipaddr2.png)
 
-add 3rd image
-![Adressage IP](../img/ipaddr2.png)
-
 Nous pouvons représenté le masque de sous réseau d'une autre manière : 192.168.12.0/24
 24 étant le nombre de bit à 1 du masque de sous-réseau en partant de la gauche
 Exemple d'autre masque fréquement utiliser : 
 /24 255.255.255.0 /16 255.255.0.0 /8 255.0.0.0
 
-Il faut noter qu'il y a des adresses à ne pas utiliser !!! -add warning
+![Adressage IP](../img/ipaddr3.png)
+
+Il faut noter qu'il y a des adresses à ne pas utiliser !!!
 
 L'adresse du Réseau 192.168.2.0 dans notre exemple
 L'adresse de Broadcast 192.168.2.255 utiliser pour envoyer des message réseau à toutes les machines connectées

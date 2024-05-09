@@ -80,7 +80,8 @@ Le format YAML est basé sur l'indentation et l'utilisation de caractères spéc
 Comme JSON, YAML est utilisé pour les fichiers de configuration et les applications où des données sont transférées. Il peut également être utilisé pour les données stockées - c'est un format plus polyvalent que JSON. En outre, YAML a été conçu pour gérer une plus grande variété de types de données que JSON. Outre les nombres et les chaînes de caractères, YAML peut gérer les dates, les horodatages, les séquences, les valeurs imbriquées, les valeurs nulles et les booléens.
 
 ### Syntaxe YAML de base
-```
+
+```yaml
 personne:
   nom: Jean Dupont
   âge: 30
@@ -96,7 +97,7 @@ contacts:
 ```
 Dans cet exemple, les données sont représentées sous forme de clés et de valeurs, avec des niveaux d'indentation pour indiquer la structure. Les listes sont représentées avec des tirets (-) et les paires clé-valeur sont séparées par des deux-points (:).
 
-```
+```yaml
 MALE: FALSE
 GPA: 3.61
 ISSUES: NULL

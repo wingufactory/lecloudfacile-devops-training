@@ -3,6 +3,7 @@
 ## DIVE
 
 Un outil pour explorer une image Docker, le contenu des couches, et découvrir des moyens de réduire la taille de votre image Docker/OCI.
+![DIVE DEMO](../img/dive_demo.png)
 [REPO GITHUB](https://github.com/wagoodman/dive)
 
 ## CURLCONVERTER
@@ -38,6 +39,6 @@ direnv est une extension pour votre shell. Elle ajoute aux shells existants une 
 ## TlDR
 
 Le projet tldr-pages est une collection de pages d'aide pour les outils en ligne de commande, maintenues par la communauté, qui vise à être un complément plus simple et plus abordable aux traditionnelles pages man.
-Peut-être êtes-vous nouveau dans le monde de la ligne de commande? Ou alors vous êtes un peu rouillé et ne parvenez pas toujours à vous rappeler des arguments pour des commandes comme lsof ou tar ?
+Peut-être êtes-vous nouveau dans le monde de la ligne de commande? Ou alors vous êtes un peu rouillé et ne parvenez pas toujours à vous rappeler des arguments pour des commandes comme lsof ou tar.
 
 [REPO GITHUB](https://github.com/tldr-pages/tldr)

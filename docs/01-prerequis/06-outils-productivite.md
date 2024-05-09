@@ -18,8 +18,6 @@ Convertir les commandes curl en Python, JavaScript, Powershell, Ansible et plus
 
 ## RIPGREP
 
-![DIVE DEMO](../img/logo-app/dive_demo.gif)
-
 ripgrep est un outil de recherche orienté lignes qui recherche récursivement dans le répertoire courant un motif d'expression régulière. Par défaut, ripgrep respecte les règles gitignore et ignore automatiquement les fichiers/répertoires cachés et les fichiers binaires. (Pour désactiver tout filtrage automatique par défaut, utilisez rg -uuu.) ripgrep est parfaitement pris en charge sur Windows, macOS et Linux, avec des téléchargements binaires disponibles pour chaque version. ripgrep est similaire à d'autres outils de recherche populaires comme The Silver Searcher, ack et grep.
 
 ![RIPGREP](../img/logo-app/ripgrep1.png)

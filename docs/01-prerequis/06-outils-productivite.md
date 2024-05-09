@@ -44,6 +44,8 @@ Une interface utilisateur terminal simple à la fois pour docker et docker-compo
 
 direnv est une extension pour votre shell. Elle ajoute aux shells existants une nouvelle fonctionnalité qui peut charger et décharger des variables d'environnement en fonction du répertoire courant.
 
+![DIRENV](../img/logo-app/direnv.png)
+
 [Site du Projet ](https://direnv.net/)
 
 ## TlDR

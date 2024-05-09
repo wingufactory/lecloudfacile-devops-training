@@ -4,7 +4,7 @@
 
 Un outil pour explorer une image Docker, le contenu des couches, et découvrir des moyens de réduire la taille de votre image Docker/OCI.
 
-![DIVE DEMO](../img/dive_demo.gif)
+![DIVE DEMO](../img/logo-app/dive_demo.gif)
 
 [REPO GITHUB](https://github.com/wagoodman/dive)
 

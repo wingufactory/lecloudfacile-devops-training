@@ -159,6 +159,8 @@ Dans un environnement DevOps, DNS joue un rôle crucial dans la résolution de n
 
 En résumé, le DNS est essentiel pour la communication électronique, permettant l’acheminement fiable des messages entre les serveurs. 🌐
 
+---
+
 ## Protocole DHCP (Dynamic Host Configuration Protocol)
 Le protocole Dynamic Host Configuration Protocol (DHCP) est un protocole réseau dont le rôle est d’assurer la configuration automatique des paramètres IP d’une station ou d’une machine, notamment en lui attribuant automatiquement une adresse IP et un masque de sous-réseau. Voici les points essentiels à connaître sur le DHCP :
 

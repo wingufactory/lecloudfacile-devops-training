@@ -26,6 +26,8 @@ Un serveur HTTP utilise par défaut le port 80 (443 pour HTTPS).
 Les clients HTTP les plus courants sont les navigateurs web.
 En résumé, l’HTTP est essentiel pour la communication entre les navigateurs et les serveurs web, permettant ainsi l’accès aux ressources du World Wide Web. 🌐
 
+---
+
 ## Protocole FTP (File Transfer Protocol)
 Le protocole de transfert de fichiers (FTP) est un standard du réseau permettant le transfert de fichiers entre un client et un serveur sur un réseau informatique. Voici les points essentiels à connaître sur le FTP :
 
@@ -49,6 +51,8 @@ Elle a elle-même été rendue obsolète par la RFC 959 en octobre 1985, version
 Plusieurs autres RFC viennent compléter cette spécification, ajoutant des extensions de sécurité et la prise en charge d’IPv6.
 En résumé, le FTP facilite le transfert de fichiers entre un client et un serveur, et il est largement utilisé pour gérer les ressources d’un site web. 📂🌐
 
+---
+
 ## Protocole SSH (Secure Shell)
 Le protocole Secure Shell (SSH), également connu sous le nom de SSH, est un moyen de communication sécurisé entre ordinateurs sur un réseau non sécurisé. Voici les points essentiels à connaître sur le SSH :
 
@@ -66,6 +70,8 @@ Il utilise le chiffrement pour brouiller les données qui traversent la connexio
 La tunnellisation permet de faire transiter un paquet à travers un réseau en utilisant un protocole ou un itinéraire qu’il ne pourrait normalement pas emprunter.
 Les tunnels SSH utilisent la redirection de port pour transférer des paquets d’une machine à l’autre.
 En résumé, le SSH est essentiel pour la communication sécurisée entre les ordinateurs, que ce soit pour gérer des serveurs à distance ou pour transférer des fichiers. 🔒🌐
+
+---
 
 ## Protocole SMTP (Simple Mail Transfer Protocol)
 Le protocole Simple Mail Transfer Protocol (SMTP) est un élément essentiel pour l’envoi de messages électroniques sur Internet. 
@@ -91,6 +97,8 @@ SmartTLS chiffre uniquement la soumission de messages.
 Il existe des serveurs SMTP publics que vous pouvez utiliser pour l’envoi de courriers électroniques.
 
 En résumé, le SMTP est essentiel pour la communication électronique, permettant l’acheminement fiable des messages entre les serveurs. 📧🌐
+
+---
 
 ## Protocole DNS (Domain Name System)
 Le Domain Name System (DNS), également connu sous le nom de système de nom de domaine, est un service informatique distribué qui associe les noms de domaine Internet avec leurs adresses IP ou d’autres types d’enregistrements. Voici les points essentiels à connaître sur le DNS :
@@ -138,6 +146,8 @@ Port 68 : Utilisé par les clients DHCP pour envoyer leurs demandes.
 En IPv6, le DHCP fonctionne également (appelé DHCPv6), mais les adresses peuvent aussi être auto-configurées sans DHCP.
 En résumé, le DHCP simplifie la gestion des adresses IP sur un réseau, permettant une configuration automatique et dynamique des hôtes. 🌐
 
+---
+
 ## Protocole Telnet
 Le protocole Telnet (terminal network ou telecommunication network, ou encore teletype network) est un protocole utilisé sur tout réseau TCP/IP, permettant de communiquer avec un serveur distant en échangeant des lignes de texte et en recevant des réponses également sous forme de texte. Créé en 1969, Telnet est un moyen de communication très généraliste et bi-directionnel. Voici les détails essentiels à connaître sur le Telnet :
 
@@ -152,6 +162,8 @@ Il permet aussi de négocier des options entre le client Telnet et le serveur Te
 ### Utilisation
 Telnet était notamment utilisé pour administrer des serveurs Unix distants ou de l’équipement réseau, avant de tomber en désuétude par défaut de sécurisation (le texte étant échangé en clair) et l’adoption de SSH.
 En résumé, bien que le protocole Telnet ait été largement remplacé par SSH pour des raisons de sécurité, il reste un élément important de l’histoire des communications réseau. 🌐
+
+---
 
 ## Protocole NTP (Network Time Protocol)
 Le Network Time Protocol (NTP) (littéralement « protocole de temps réseau »), parfois appelé protocole de synchronisation de réseau, est un protocole qui permet de synchroniser, via un réseau informatique, l’horloge locale d’ordinateurs sur une référence d’heure. Voici les détails essentiels à connaître sur le NTP :
@@ -182,3 +194,35 @@ La version 4 de NTP, publiée dans la RFC 5905 en juin 2010, est une révision i
 ### Simple Network Time Protocol (SNTP)
 Une version simplifiée de NTP, appelée Simple Network Time Protocol (SNTP), existe également. Elle ne spécifie pas les algorithmes à mettre en place dans les machines.
 En résumé, le NTP est essentiel pour la synchronisation précise des horloges sur un réseau, garantissant une référence d’heure fiable. 🕰️🌐
+
+---
+
+## SNMP (Simple Network Management Protocol)
+
+**Protocole** : SNMP (Simple Network Management Protocol)  
+**Port** : 161 (UDP)
+
+### Description :  
+Le protocole SNMP est un protocole de gestion de réseau qui permet de surveiller, contrôler et gérer des équipements réseau à distance. Il est couramment utilisé pour la supervision des routeurs, des commutateurs, des serveurs, des imprimantes et d'autres dispositifs connectés au réseau. SNMP fonctionne selon une architecture client-serveur, où un **Manager SNMP** (client) collecte les informations des **Agents SNMP** (serveurs) situés sur les périphériques réseau.
+
+### Fonctionnement :  
+Le SNMP repose sur un modèle de communication simple où le Manager SNMP envoie des requêtes aux Agents SNMP pour obtenir des informations sur le matériel réseau. Ces informations sont stockées dans des bases de données appelées **MIB** (Management Information Base), qui organisent les données sous forme d'arbres d'objets. Les Agents répondent ensuite aux requêtes du Manager avec les données demandées.
+
+Les principales actions possibles avec SNMP sont :
+- **GET** : Demander une valeur spécifique d'une variable de l'équipement (ex. taux d'utilisation du CPU).
+- **SET** : Modifier la valeur d'une variable d'un équipement (ex. changer la configuration d'une interface réseau).
+- **TRAP** : Les Agents envoient des messages de notification non sollicités au Manager pour informer d'un événement, comme une panne ou une surcharge.
+
+### Versions :  
+SNMP existe en plusieurs versions :
+- **SNMPv1** : Première version du protocole, simple mais avec des faiblesses de sécurité.
+- **SNMPv2c** : Introduit des améliorations de performance, mais toujours peu sécurisé (partage de la communauté en clair).
+- **SNMPv3** : Version sécurisée, avec des mécanismes d'authentification et de chiffrement pour garantir la confidentialité et l'intégrité des données échangées.
+
+### Utilisation dans un contexte DevOps :  
+Dans un environnement DevOps, SNMP est largement utilisé pour la supervision de l'infrastructure. Par exemple, avec des solutions de monitoring comme Zabbix ou Prometheus, le protocole SNMP permet de collecter des métriques sur l'état des équipements réseau. Ces informations sont essentielles pour détecter rapidement les pannes, surveiller la performance réseau, et optimiser les configurations matérielles et logicielles.
+
+### Sécurité :  
+L'une des principales préoccupations avec SNMP, surtout dans ses versions antérieures (v1 et v2c), est la sécurité. Les données circulent en clair, ce qui les rend vulnérables à des attaques de type **man-in-the-middle** ou à l'exfiltration d'informations sensibles. SNMPv3 a corrigé ces lacunes en introduisant des mécanismes de chiffrement et d'authentification, mais il est important de bien configurer les accès pour éviter toute intrusion non autorisée.
+
+---

@@ -29,12 +29,3 @@ Vous apprendrez les principes fondamentaux du réseau, de Linux, des protocoles 
 - Prise en main des outils
 
 - Quiz sur les prérequis
-
-## Points Clés
-
-Lister les différents points clés à retenir, à éviter, etc.
-
-
-## Conclusion
-
-Mettre une conclusion brieve du cours tout en assurant la transition vers le cours ou lab prochain.

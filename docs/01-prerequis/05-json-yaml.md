@@ -157,3 +157,19 @@ Subjects:
 ```
 
 Il y a beaucoup de choses que YAML peut faire et que JSON ne peut pas faire. Mais il y a aussi des situations où JSON l'emporte sur YAML (comme dans le domaine de la sécurité des données), de sorte que la solution la plus adaptée à chaque situation varie.
+
+## Utilisation dans un contexte DevOps
+
+### JSON en DevOps
+Dans un contexte DevOps, JSON est souvent utilisé pour :
+- **API et microservices** : La majorité des APIs RESTful utilisent JSON comme format d’échange de données entre les services, notamment pour les communications entre microservices.
+- **Infrastructure as Code (IaC)** : JSON est utilisé pour décrire l'infrastructure dans des outils comme AWS CloudFormation, où les fichiers de configuration sont exprimés en JSON pour orchestrer la création et la gestion des ressources cloud.
+- **Stockage de configurations** : JSON est un format commun pour stocker des configurations, notamment dans des applications web ou mobiles, où les préférences utilisateur, les paramètres, ou les états sont souvent sérialisés en JSON.
+
+### YAML en DevOps
+YAML est couramment utilisé dans les workflows DevOps pour sa lisibilité et sa simplicité :
+- **Orchestration et gestion de la configuration** : YAML est largement utilisé dans des outils comme Ansible, Kubernetes et Docker Compose pour décrire la configuration des systèmes, des conteneurs et des clusters. Sa structure claire et son utilisation minimale de symboles en font un format lisible et facilement modifiable.
+- **CI/CD Pipelines** : Dans des systèmes de CI/CD comme GitLab CI ou CircleCI, les fichiers de pipeline sont souvent écrits en YAML, permettant de définir des étapes de build, de test, et de déploiement de manière structurée et lisible.
+- **Gestion de l’infrastructure** : YAML est également utilisé dans d’autres outils IaC tels que Terraform (bien que HCL soit plus courant) ou AWS SAM (Serverless Application Model) pour configurer des fonctions serverless et des ressources cloud.
+
+En résumé, JSON est souvent privilégié pour l'échange de données et la communication API en raison de son adoption massive et de sa compatibilité avec de nombreux langages. YAML, quant à lui, est plus utilisé pour la configuration et la gestion d'infrastructures complexes, grâce à sa lisibilité accrue et sa prise en charge de données imbriquées et structurées de manière plus intuitive.

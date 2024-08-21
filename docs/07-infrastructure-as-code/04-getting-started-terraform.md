@@ -204,4 +204,4 @@ module "vpc" {
 - variables.tf
 - outputs.tf
 - modules: creer d'abord un repertoire modules
--renommer le fichier main.tf
+- renommer le fichier main.tf

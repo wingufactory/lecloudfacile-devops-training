@@ -1,39 +1,26 @@
-# Getting Started avec Terraform
+# Getting Started
 
-## Presentation
- 
-### Objectifs
-
-Nous allons dans ce lab apprendre les bases de terraform.
+## Objectifs
+Nous allons dans ce lab apprendre les bases de terraform:
 
 - creation de fichier main.tf
 - Ajout AWS Provider
 - Generer et configurer AWS credentials
 - Configure un AWS Virtual Machine
-- Initialize terraform project
+- Initialiser le projet terraform 
 - Terraform fmt
 - Terraform validate
 - Terraform plan
 - Terraform apply
 - Terraform apply (updateing)
-- Create Input Variables
-- Set Locals
-- Create Outputs
-- Use a Terraform Module
-- Divide project into multiple files
+- Creer des Input Variables
+- Creer des Variables Locals
+- Creer des Variables Outputs
+- utilisation d'un module Terraform 
+- Division du projet en plusieurs fichiers
 - Terraform destroy
-- Create a Terraform Cloud workspace
-- Migrate local to remote workspace
-- Move AWS Credentials to Env Vars
 
-###  Prerequis
-
-- Installation Terraform
-- Compte AWS
-
-## Déroulement du lab
-
-### Etape1: Creation du provider
+## Ajout du provider
 
 [Terraform registry](https://registry.terraform.io/?product_intent=terraform)
 
@@ -58,16 +45,13 @@ provider "aws" {
 }
 ```
 
-
-### Etape2 : Configuration du provider & creation d'une ressource
-
 Next, aller dans la [documentation du provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) pour trouver tout ce qui est possible de provisionner pour ce provider ainsi que comment le configurer.
 
 Dans ce `Started Lab`, nous allons essayer de provisionner une VM.
 
 [Check link: Started Lab Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build)
 
-
+## Configuration du provider
 
 ```yaml
 provider "aws" {
@@ -84,6 +68,8 @@ resource "aws_instance" "TfServer00" {
   }
 }
 ```
+
+## Parametrage des credentials AWS 
 
 Nous allons par la suite aller chercher nos AWS credentials.
 Creer un nouveau Utilisateur avec un policy `administratorAccess` et recupere les credentials.
@@ -109,10 +95,14 @@ user@devopsadvanced~ % aws sts get-caller-identity
     "Arn": "arn:aws:iam::xxxxx:user/xxxxxx"
 }
 ```
+## Initialisation du projet
 
-### Etape3 : initialisation et validation avec Terraform init
+faire la commande:
+ ```sh
+ terraform init
+ ```
 
-faire la commande `terraform init`
+## Validation
 
 pour valider les fichiers terraform:
 
@@ -120,8 +110,8 @@ pour valider les fichiers terraform:
 user@devopsadvanced 000_getting_started % terraform validate
 Success! The configuration is valid.
 ```
-### Etape4 : creation d'une variable terraform
-Creation de Variables Input 
+
+## Creation de Variables Input 
 [reference declaration variable](https://www.terraform.io/docs/language/values/variables.html#declaring-an-input-variable)
 
 ```sh
@@ -137,8 +127,7 @@ creer un fichier `terraform.tfvars`
 instance_type = "t2.micro"
 ```
 
-### Etape5 : Creation et utilisation d'une variable locale avec Terraform
-
+## Creation de variables locals
 on peut aussi déclarer les variables localement:
 reference [declaring-a-local-value](https://developer.hashicorp.com/terraform/language/values/locals#declaring-a-local-value)
 
@@ -157,9 +146,18 @@ changeons le tag de notre instance:
   }
 ```
 
+## Terraform Plan
 Faire `terraform plan` pour voir la prise en compte des variables locaux.
 
-### Etape6 : Déclaration de variables outputs?
+```sh
+terraform plan
+```
+
+## declaration de variables output
+
+
+
+Comment déclarer des variables output?
 
 reference 
 
@@ -173,7 +171,7 @@ output "instance_public_ip_addr" {
 }
 ```
 
-### Etape7:  Utilisation de Modules
+## Utilisation de Modules
 
 reference [Module VPC](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest)
 
@@ -199,7 +197,9 @@ module "vpc" {
 ```
 
 
-`BEST PRACTICE: Separer le contenu du fichier sur plusieurs fichiers selon les roles`
+## Bonus Lab - BEST PRACTICE: 
+Separer le contenu du fichier sur plusieurs fichiers selon les roles
+
 - creer un fichier providers.tf
 - variables.tf
 - outputs.tf

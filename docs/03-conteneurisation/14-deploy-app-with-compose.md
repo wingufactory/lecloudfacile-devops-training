@@ -201,6 +201,9 @@ services:
 
   database:
 
+    # Nom du comteneur
+    container_name: database
+
     # Choix de l'image
 
     image: postgres:16.2-alpine
@@ -230,6 +233,9 @@ services:
   
   adminer:
 
+    # Nom du comteneur
+    container_name: adminer  
+
     # Choix de l'image
     
     image: adminer
@@ -251,6 +257,9 @@ services:
   # Service backend: Application springboot contenant le logique métier et exposant des apis pour faciliter la communication.
 
   backend:
+
+    # Nom du comteneur
+    container_name: backend
 
     # Cette phase permet de construire l'image Docker qui sera utilisé en s'appuyant sur le dockerfile. Le parametre <context> permet d'indiquer l'emplacement du répertoire sur lequel le build sera executé.
 
@@ -284,6 +293,9 @@ services:
 
   frontend:
 
+    # Nom du comteneur
+    container_name: frontend
+
     # Cette phase permet de construire l'image Docker qui sera utilisé en s'appuyant sur le dockerfile. Le parametre <context> permet d'indiquer l'emplacement du répertoire sur lequel le build sera executé.
 
     build:
@@ -306,6 +318,7 @@ services:
     networks:
       - app-network
       - frontend
+
 
 ```
 
@@ -355,9 +368,9 @@ Le répertoire **lecloudfacile-devops-labs/nginx-proxy/conf.d/moodboard** doit c
 
 ```bash
 devops@lecloudfacile:~$ cd lecloudfacile-devops-labs/nginx-proxy/
-devops@lecloudfacile:~$ cp conf.d/moodboard/adminer-moodboard.conf.template conf.d/moodbord/adminer-moodboard.conf
-devops@lecloudfacile:~$ cp conf.d/moodboard/backend-moodboard.conf.template conf.d/moodboard/backend-moodboard.conf
-devops@lecloudfacile:~$ cp conf.d/moodboard/frontend-moodboard.conf.template conf.d/moodboard/frontend-moodboard.conf
+devops@lecloudfacile:~$ cp conf.d/moodboard/adminer-moodboard.conf.template conf.d/adminer-moodboard.conf
+devops@lecloudfacile:~$ cp conf.d/moodboard/backend-moodboard.conf.template conf.d/backend-moodboard.conf
+devops@lecloudfacile:~$ cp conf.d/moodboard/frontend-moodboard.conf.template conf.d/frontend-moodboard.conf
 ```
 
 - Options 2 : Création fichiers de configurations from scratch
@@ -444,7 +457,7 @@ Il faudra se positionner dans le répertoire **lecloudfacile-devops-labs/nginx-p
 Il faudra nettoyer les fichiers de configurations du proxy au risque de voir le proxy crashé de façon continue.
 
 ```bash
-devops@lecloudfacile:~$ rm -rf conf.d/moodboard/adminer-mooadbord.conf conf.d/moodboard/backend-moodboard.conf conf.d/moodboard/frontend-moodboard.conf
+devops@lecloudfacile:~$ rm -rf conf.d/adminer-mooadbord.conf conf.d/backend-moodboard.conf conf.d/frontend-moodboard.conf
 ```
 
 - recharge de la configuration du proxy

@@ -1,58 +1,42 @@
 # Quelques outils pour augmenter la productivité
 
-## DIVE
+## Exploitation Linux 
 
-Un outil pour explorer une image Docker, le contenu des couches, et découvrir des moyens de réduire la taille de votre image Docker/OCI.
+### DirEnv
 
-![DIVE DEMO](../img/logo-app/dive_demo.gif)
+[DirEnv](https://direnv.net/) est une extension permettant d'ajouter aux shells existants la fonctionnalité de charger et décharger des variables d'environnement en fonction du répertoire courant.
 
-[REPO GITHUB](https://github.com/wagoodman/dive)
+![DIRENV](/img/part/01/06/direnv.png)
 
-## CURLCONVERTER
 
-Convertir les commandes curl en Python, JavaScript, Powershell, Ansible et plus
+### RIPGREP
 
-![CURL CONVERTER](../img/logo-app/curl_converter.png)
+[RIGREP](https://github.com/BurntSushi/ripgrep) est un outil cross-platform (Windows, macOS et Linux) qui recherche récursivement dans le répertoire courant un pattern d'expression régulière (regex). 
 
-[Site du Projet ](https://curlconverter.com/)
+Par défaut, RIPGREP respecte les règles définies sur le fichier `.gitignore` et ignore automatiquement les fichiers et répertoires cachés ainsi que les fichiers binaires. Il est similaire à d'autres outils de recherche populaires comme The Silver Searcher, ack et grep.
 
-## RIPGREP
+![RIPGREP](/img/part/01/06/ripgrep.png)
 
-ripgrep est un outil de recherche orienté lignes qui recherche récursivement dans le répertoire courant un motif d'expression régulière. Par défaut, ripgrep respecte les règles gitignore et ignore automatiquement les fichiers/répertoires cachés et les fichiers binaires. (Pour désactiver tout filtrage automatique par défaut, utilisez rg -uuu.) ripgrep est parfaitement pris en charge sur Windows, macOS et Linux, avec des téléchargements binaires disponibles pour chaque version. ripgrep est similaire à d'autres outils de recherche populaires comme The Silver Searcher, ack et grep.
 
-![RIPGREP](../img/logo-app/ripgrep1.png)
+### CURLCONVERTER
 
-[REPO GITHUB](https://github.com/BurntSushi/ripgrep)
+[CURLCONVERTER ](https://curlconverter.com/) permet de convertir les commandes curl en code Python, JavaScript, Powershell, Ansible et plus. Dans une perspective d'automatisation des processus, il permet d'avoir rapidement le code associé à un appel curl.
 
-## Cheat.sh
+![CURL CONVERTER](/img/part/01/06/curl_converter.png)
 
-Accès unifié aux meilleurs dépôts de fiches techniques communautaires du monde.
 
-![DIVE DEMO](../img/logo-app/cheat_cheet_sh.png)
+## Documentation
 
-[REPO GITHUB](https://github.com/chubin/cheat.sh)
+### Cheat.sh
 
-## LazyDocker
+[Cheat.sh](https://github.com/chubin/cheat.sh) est un utilitaire en ligne de commande offrant un accès unifié aux meilleurs dépôts de fiches techniques communautaires du monde.
 
-Une interface utilisateur terminal simple à la fois pour docker et docker-compose, écrite en Go avec la bibliothèque gocui.
-
-![LAZY DOCKER DEMO](../img/logo-app/lazy_docker_demo.gif)
-
-[REPO GITHUB](https://github.com/jesseduffield/lazydocker)
-
-## DirEnv
-
-direnv est une extension pour votre shell. Elle ajoute aux shells existants une nouvelle fonctionnalité qui peut charger et décharger des variables d'environnement en fonction du répertoire courant.
-
-![DIRENV](../img/logo-app/direnv.png)
-
-[Site du Projet ](https://direnv.net/)
+![Cheat.sh DEMO](/img/part/01/06/cheat_cheet_sh.png)
 
 ## TlDR
 
-Le projet tldr-pages est une collection de pages d'aide pour les outils en ligne de commande, maintenues par la communauté, qui vise à être un complément plus simple et plus abordable aux traditionnelles pages man.
-Peut-être êtes-vous nouveau dans le monde de la ligne de commande? Ou alors vous êtes un peu rouillé et ne parvenez pas toujours à vous rappeler des arguments pour des commandes comme lsof ou tar.
+[TlDR](https://github.com/tldr-pages/tldr) est une collection de pages d'aide pour les outils en ligne de commande, maintenues par la communauté, qui vise à être un complément plus simple et plus abordable aux traditionnelles pages man.
 
-![TLDR ](../img/logo-app/tldr-dark.png)
+![TLDR ](/img/part/01/06/tldr-dark.png)
 
-[REPO GITHUB](https://github.com/tldr-pages/tldr)
+

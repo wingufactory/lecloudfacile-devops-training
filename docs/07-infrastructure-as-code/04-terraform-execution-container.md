@@ -14,12 +14,12 @@
 
 - Instance Docker fonctionnel
 - Connaissance basique Terraform
-- Terraform CLI installé
+- [Terraform CLI](https://developer.hashicorp.com/terraform/install)
 
 
 ## Déroulement du Lab
 
-### Etape 1 : Récuperation des sources du Lab
+### Etape 1: Récuperation des sources du Lab
 
 La commandes ci-dessous permet de récupérer les sources utiles pour ce lab.
 
@@ -28,7 +28,7 @@ $ git clone https://github.com/wingufactory/lecloudfacile-devops-labs.git
 
 $ cd terraform/simple-container-on-docker
 ```
-###  Etape 2 : Analyse du fichier terraform
+###  Etape 2: Analyse du fichier terraform
 
 Le fichier `main.tf` contient des instructions qui permettront de déployer un conteneur Docker.
 
@@ -66,13 +66,13 @@ resource "docker_container" "nginx" {
   # Exposition du port 80 du conteneur sur le port 8000 de a machine hôte
   ports {
     internal = 80
-    external = 8000
+    external = 8090
   }
 }
 
 ```
 
-### Etape 3: nitialisation du projet
+### Etape 3: Initialisation du projet
 
 L'initialisation du répertoire `terraform/simple-container-on-docker`  permettra de préparer votre répertoire de travail pour l'utilisation de Terraform en configurant les fichiers & répertoires nécessaires.
 
@@ -100,10 +100,10 @@ Les commandes suivantes permettent de déployer les ressources déclarées dans 
 $ terraform plan
 
 # Déploiement des ressources 
-$ terraform apply
+$ terraform apply --auto-approve
 ```
 
-### Etape 6: Verification
+### Etape 6: Verification du déploiement
 
 - L'execution de la commande suivante permet de vérifier le bon déploiement du conteneur.
 
@@ -114,10 +114,10 @@ $ docker ps
 - L'accès à l'url `http://localhost:8000` sur le navigateur Web est également un indicateur du déploiement de votre infrastructure.
 
 
-### Etape 6 : Décommissionnement de l'infrastructure
+### Etape 7: Décommissionnement de l'infrastructure
 
-La commande suivante permettra de détruire l'infrastructure crée dans ce lab.
+Détruisez l'infrastructure crée dans ce lab avec la commande suivante
 
 ```sh
-$ terraform destroy
+$ terraform destroy --auto-approve
 ```

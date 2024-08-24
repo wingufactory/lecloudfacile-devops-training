@@ -128,6 +128,9 @@ v.memory = la variable de mémoire RAM déclarée plus haut, ici 2GB de RAM.
 
 Encore une fois, vérifiez bien l’indentation afin de correctement clôturer chaque bloc de configuration par un end sinon vous aurez une erreur de syntaxe remontée par la commande vagrant validate.
 
+## Utilisation dans un contexte DevOps
+
+Dans un contexte DevOps, Vagrant est souvent utilisé pour créer des environnements de développement identiques pour tous les développeurs d’une équipe. Cela permet de garantir que le code fonctionne de la même manière sur toutes les machines, évitant ainsi les problèmes liés aux différences d’environnements. Par exemple, une équipe travaillant sur une application web peut utiliser Vagrant pour créer un environnement avec une configuration spécifique de serveur web, base de données, et autres dépendances.
 
 ## Pour plus d'informations
 

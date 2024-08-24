@@ -8,33 +8,20 @@ Vous apprendrez les principes fondamentaux du réseau, de Linux, des protocoles 
 
 ## Sommaire
 
-- Rappel du modèle TCP/IP
+- [Rappel du modèle TCP/IP, Réseau : IPV4/6, RFC1918, CIDR et Découpage](01-rappel-du-modele-tcpip.md)
 
-- Réseau : IPV4/6, RFC1918, CIDR et Découpage
+- [Introduction sur Linux : Commandes de base, Éditeurs, Gestion des ressources (RAM, CPU, Disque), Troubleshooting](02-Intruduction-sur-linux.md)
 
-- Introduction sur Linux : Commandes de base, Éditeurs, Gestion des ressources (RAM, CPU, Disque), Troubleshooting
+- [Prise en main de l’environnement Linux](07-lab-prise-en-main-de-lenvironnement-linux.md)
 
-- Prise en main de l’environnement Linux
+- [Protocoles & Services essentiels : SSH, HTTP, DNS, gRPC, Socket](03-protocoles-services.md)
 
-- Protocoles & Services essentiels : SSH, HTTP, DNS, gRPC, Socket
+- [Introduction sur Vagrant](04-Introduction-sur-vagrant.md)
 
-- Exploitation des services SSH & DNS
+- [Introduction sur les langages de formatage de données : JSON & YAML](05-json-yaml.md)
 
-- L'essentiel du réseau sur Linux : adressage, routage, filtrage packet, troubleshooting
+- [Bonus : quelques outils Linux pour la productivité : TlDR, cheat.sh, curl, DirEnv, rigrep](06-outils-productivite.md)
 
-- Introduction sur les langages de formatage de données : JSON & YAML
+- [Prise en main des outils de productivité ](08-lab-prise-en-main-outils-de-productivite.md)
 
-- Bonus : quelques outils Linux pour la productivité : TlDR, cheat.sh, curl, DirEnv, rigrep
-
-- Prise en main des outils
-
-- Quiz sur les prérequis
-
-## Points Clés
-
-Lister les différents points clés à retenir, à éviter, etc.
-
-
-## Conclusion
-
-Mettre une conclusion brieve du cours tout en assurant la transition vers le cours ou lab prochain.
+- [Quiz sur les prérequis](09-quiz-general.md)

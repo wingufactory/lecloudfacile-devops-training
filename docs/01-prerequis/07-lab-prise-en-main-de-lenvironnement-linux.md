@@ -1,117 +1,152 @@
 # Lab : Prise en main de l'environnement Linux
 
-## Objectifs du Lab
-Dans ce lab, vous allez :
-- Gérer des processus sous Linux.
-- Manipuler des fichiers et répertoires.
-- Configurer un service système.
-- Gérer les interfaces réseau.
-- Sécuriser une connexion SSH.
+🕘 : 30 minutes
 
-## Prérequis
-- Accès à une machine virtuelle ou un serveur Linux avec des privilèges `sudo`.
-- Une paire de clés SSH générée sur votre machine locale.
+## Présentation
 
-## Durée estimée
-30 minutes
+### Objectifs du Lab
+- Gestion des processus sous Linux
+- Manipulation des fichiers et répertoires
+- Configuration d'un service système
+- Gestion des interfaces réseau
+- Sécurisation d'une connexion SSH
 
----
+### Prérequis
+- Accès à une machine virtuelle ou un serveur Linux avec des privilèges `sudo`
 
-## Exercice 1 : Gestion des processus et optimisation des ressources
 
-1. **Lancer une tâche en arrière-plan et identifier son PID :**
-- Lancez un processus en arrière-plan (ex. : un calcul simple ou une boucle infinie).
+## Déroulment du Lab
+
+### Etape 1 : Gestion des processus et optimisation des ressources
+
+- **Lancement d'une tâche en arrière-plan**
+
+La commande suivante permet de lancer un processus en arrière-plan (ex. : un calcul simple ou une boucle infinie).
 ```bash
-yes > /dev/null &
+$ yes > /dev/null &
 ```
-- Affichez la liste des processus pour trouver le PID de cette tâche.
+NB: Attention !! Le processus s'arrêtera en cas de déconnexion de l'utilisateur. Pour une persitence du processus même après déconnexion de l'utilisateur, il est recommendé d'utiliser l'utilitaire `nohup`
+
 ```bash
-ps aux | grep yes
+$ nohup yes > /dev/null &
 ```
 
-2. **Modifier la priorité d’un processus :**
-Réduisez la priorité du processus avec la commande renice pour ne pas qu’il consomme trop de ressources CPU.
+- **Identification PID**
+
+La commande suivante permet de lister les processus en cours d'execution sur la machine et de filtrer le résultat en recherchant le mot-clé `yes` grâce à la commande grep.
 ```bash
-sudo renice +10 <PID>
+$ ps aux | grep yes
 ```
 
-3.	**Arrêter le processus en utilisant son PID :**
-- Utilisez kill pour stopper le processus.
-```
-kill <PID>
-```
+- **Modification de la priorité d’un processus**
 
-## Exercice 2 : Manipulation avancée des fichiers et répertoires
+La commande ci-dessous permet de réduire la priorité du processus avec la commande `renice` pour ne pas qu’il consomme trop de ressources CPU. Il est nécessaire d'avoir le PID du processus.
 
-1.	**Créer un répertoire compressé avec des fichiers :**
-- Créez un dossier devops_lab et remplissez-le avec des fichiers d’exemple (ex. : via touch ou echo).
 ```bash
-mkdir devops_lab
-echo "Contenu exemple" > devops_lab/fichier1.txt
-echo "Autre contenu" > devops_lab/fichier2.txt
+$ sudo renice +10 <PID>
 ```
 
-2.	**Compresser le dossier dans une archive .tar.gz :**
-- Créez une archive compressée du dossier.
+- **Arrêter le processus en utilisant son PID**
+
+Grâce à la commande kill, il est possible de stopper un processus. Il est nécessaire d'avoir le PID du processus.
+
+```
+$ kill <PID>
+```
+
+## Etape 2: Manipulation avancée des fichiers et répertoires
+
+- **Création d'un répertoire compressé avec des fichiers**
+
+Les commandes ci-dessous permettent de créer un dossier `devops_lab` dans lequel nous ajoutons un fichier nommé `fichier1.txt`.
+
 ```bash
-tar -czvf devops_lab.tar.gz devops_lab
+$ mkdir devops_lab
+$ echo "Contenu exemple" > devops_lab/fichier1.txt
 ```
 
-3.	**Vérifiez la taille de l’archive et son contenu :**
-- Affichez les détails du fichier compressé.
+- **Compression d'un dossier dans une archive .tar.gz**
+
+La commande ci-dessous permet de créer une archive compressée du dossier `devops_lab`.
 ```bash
-ls -lh devops_lab.tar.gz
+$ tar -czvf devops_lab.tar.gz devops_lab
 ```
-- Listez les fichiers à l’intérieur de l’archive sans la décompresser.
+
+- **Vérification de l’archive**
+
+Les commandes ci-dessous permet d'affciher les détails du fichier compressé (taille de l’archive et son contenu sans le décompresser)
+
 ```bash
-tar -tzvf devops_lab.tar.gz
+$ ls -lh devops_lab.tar.gz
+$ tar -tzvf devops_lab.tar.gz
 ```
 
-## Exercice 3 : Configuration et gestion de service système
 
-1.	**Activer et gérer le service sshd :**
-- Vérifiez si le service sshd est actif. Si ce n’est pas le cas, démarrez-le.
+## Etape 3: Configuration et gestion de service système
+
+- **Activation du service sshd**
+
+La commande ci-dessous pemet de vérifier si le service sshd est actif. 
 ```bash
-sudo systemctl status sshd
-sudo systemctl start sshd
+$ sudo systemctl status sshd
 ```
 
-2.	**Configurer le service pour démarrer automatiquement au démarrage du système :**
-- Assurez-vous que le service SSH est activé au démarrage.
+Dans le cas où le service n'est pas démarré, la commande suivante permet de le démarrer.
 ```bash
-sudo systemctl enable sshd
+$ sudo systemctl start sshd
 ```
 
-3.	**Modifier la configuration SSH pour améliorer la sécurité (facultatif) :**
-- Éditez le fichier /etc/ssh/sshd_config pour désactiver l’authentification par mot de passe et ne permettre que l’authentification par clé publique.
-- Redémarrez le service SSH après la modification.
+- **Configuration du service pour un démarrage automatique**
+
+La commande ci-dessous permet de configurer le serice sshd pour une activation automatique lors du démarrage du système.
+
 ```bash
-sudo systemctl restart sshd
+$ sudo systemctl enable sshd
 ```
 
-## Exercice 4 : Configuration réseau de base et utilisation d’une clé SSH
+- **Modification de la configuration SSH pour améliorer la sécurité (facultatif)**
 
-1.	**Configurer temporairement une adresse IP statique sur l’interface eth0 :**
-- Utilisez la commande suivante pour configurer l’adresse IP et l’activer immédiatement.
+Pour plus de sécuirté, il est important d'apporter certaines modifications sur le fichier `/etc/ssh/sshd_config`. Parmi les modifications, nous pouvons noter la désactivation de l’authentification par mot de passe et ne permettre que l’authentification par clé publique.
+
+Il est nécessaire de rédémarrer le service pour une prise en compte des modifications.
+
 ```bash
-sudo ip addr add 192.168.1.100/24 dev eth0
-sudo ip link set eth0 up
+$ sudo systemctl restart sshd
 ```
 
-2.	**Vérifier la configuration réseau :**
-- Affichez la nouvelle configuration de l’interface réseau.
+## Etape 4 : Configuration réseau de base
+
+- **Configuration temporairement une adresse IP statique sur l’interface eth0**
+
+La commande suivante permet de configurer l'adresse IP et l'activer immédiatement.
 ```bash
-ip addr show eth0
+$ sudo ip addr add 192.168.1.100/24 dev eth0
+$ sudo ip link set eth0 up
 ```
 
-3.	**Se connecter via SSH en utilisant une clé publique :**
-- Sur votre machine locale, connectez-vous à la machine Linux à l’aide de la clé publique que vous avez configurée.
+- **Vérification de la configuration réseau**
+La commande suivante permet d'afficher les détails dune carte réseau(eth0 dans notre cas)
 ```bash
-ssh -i ~/.ssh/id_rsa apprenant@<adresse_ip>
+$ ip addr show eth0
 ```
 
-4.	**Sécuriser l’accès SSH (facultatif) :**
-- Comme vu précédemment, désactivez l’authentification par mot de passe et testez la connexion avec la clé SSH.
+## Etape 4 : Utilisation d’une clé SSH
+
+- **Génération d'une paire de clé SSH**
+
+La commande ci-dessous permet de générer une paire de clé SSH (clé privé et clé publique). Il est possible de choisir le type de clé souhaité: RSA, ECDSA, ED25519, DSA, etc.
+
+```bash
+$ ssh-keygen -t rsa
+```
+
+- **Connexion SSH en utilisant une clé publique**
+
+La commande ci-dessous permet de se connecter sur la VM en utilisant la clé publique.
+
+```bash
+ssh -i ~/.ssh/id_rsa <user>@<adresse_ip>
+```
 
 ## Conclusion
 

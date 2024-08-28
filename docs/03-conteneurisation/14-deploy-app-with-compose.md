@@ -457,7 +457,7 @@ Il faudra se positionner dans le répertoire **lecloudfacile-devops-labs/nginx-p
 Il faudra nettoyer les fichiers de configurations du proxy au risque de voir le proxy crashé de façon continue.
 
 ```bash
-devops@lecloudfacile:~$ rm -rf conf.d/adminer-mooadbord.conf conf.d/backend-moodboard.conf conf.d/frontend-moodboard.conf
+devops@lecloudfacile:~$ rm -rf conf.d/adminer-moodboard.conf conf.d/backend-moodboard.conf conf.d/frontend-moodboard.conf
 ```
 
 - recharge de la configuration du proxy

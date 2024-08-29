@@ -56,7 +56,7 @@ Avant de procéder à l'execution des commandes nécessaires, nous allons décri
 
 FROM maven:3.9.4-eclipse-temurin-17 AS build
 
-# Définition d'unrépertoire de travail à l'intérieur du conteneur temporaire
+# Définition d'un répertoire de travail à l'intérieur du conteneur temporaire
 
 WORKDIR /app
 

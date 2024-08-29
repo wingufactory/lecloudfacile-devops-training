@@ -41,16 +41,20 @@ terraform {
   # Déclaration des providers requis
   required_providers {
 
-    # Ajout du provider Docker
+    # ici nous allons utiliser le provider docker
     docker = {
+      
+      #Indique la source de ce provider
       source = "kreuzwerker/docker"
+
+      #indique la version du provider utilisée
       version = "~> 3.0.1"
     }
   }
 }
 
-# Configuration du provider
-provider "docker" {}
+#indique qu'on va utiliser le provider docker avec un configuration specifique.
+#{} signifie que nous allons utiliser les configurations par defaut de ce provider provider "docker" {}
 
 # Déclaration d'une ressource - image Docker
 resource "docker_image" "nginx" {
@@ -121,3 +125,7 @@ Détruisez l'infrastructure crée dans ce lab avec la commande suivante
 ```sh
 $ terraform destroy --auto-approve
 ```
+
+##  references
+
+- [Docker provider](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs)

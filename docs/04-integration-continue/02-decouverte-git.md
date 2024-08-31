@@ -165,6 +165,10 @@ Les workflows Git sont des stratégies pour organiser et gérer les branches et 
 
 - **Trunk-Based Development** : Tous les développeurs travaillent sur une seule branche principale (`trunk`) et effectuent des intégrations fréquentes. Les branches sont courtes et intégrées rapidement pour minimiser les conflits.
 
+### Exemple du Workflow Git Flow
+
+![gitflow diagram example](../img/gitflow.png)
+
 ### Choix du Workflow :
 Le choix du workflow dépend de la taille de l'équipe, de la complexité du projet, et des besoins de livraison. Par exemple, Git Flow est idéal pour les projets avec des cycles de releases structurés, tandis que Trunk-Based Development est adapté pour des déploiements continus.
 

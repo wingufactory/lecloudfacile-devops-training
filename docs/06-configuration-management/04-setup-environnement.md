@@ -183,8 +183,8 @@ end
 
 La commande suivante permet de provisionner les machines. 
 
-```yaml
-$ vagrant up
+```sh
+vagrant up
 ```
 
 
@@ -193,41 +193,64 @@ $ vagrant up
 * Accédez via ssh au serveur target
 
 ```sh
-$ vagrant ssh target
+vagrant ssh target
 ```
 
 * Configurez un mot de passe pour l'utilisateur ansible
 
 ```sh
-$ sudo passwd ansible 
+sudo passwd ansible 
 ```
+
+* Editez le fichier /etc/ssh/sshd_config modifier la valeur de la propriété suivante comme suit:
+
+```
+PasswordAuthentication yes
+```
+
+* Relancez le service sshd
+```sh
+sudo systemctl restart sshd 
+```
+
 
 ### Etape 5: Finalisation de la configuration sur le serveur ansible
 
 * Accédez via ssh au serveur ansible
 
 ```sh
-$ vagrant ssh ansible
+vagrant ssh ansible
 ```
 
 * Générez les clés SSH (privé et publique). Attention à ne pas mettre de mot de passe
 
 ```sh
-$ sudo su - ansible
-$ ssh-keygen
+sudo su - ansible
+ssh-keygen
+```
+
+* Editez le fichier /etc/ssh/sshd_config modifier la valeur de la propriété suivante comme suit:
+
+```
+PasswordAuthentication yes
+```
+
+* Relancez le service sshd
+```sh
+sudo systemctl restart sshd 
 ```
 
 * Copiez da la clé publique sur le serveur target.
 
 ```sh
-$ ssh-copy-id ansible@target.lcf.io
+ssh-copy-id ansible@target.lcf.io
 ```
 
 
 * Testez la connexion SSH de `ansible` vers `target`
 
 ```sh
-$ ssh ansible@target.lcf.io
+ssh ansible@target.lcf.io
 ```
 
 
@@ -237,7 +260,7 @@ $ ssh ansible@target.lcf.io
 * Créez un fichier nommé `inventaire` avec le contenu ci-dessous:
 
 ```yaml
-## à copier dans le fichier hosts
+## à copier dans le fichier inventaire
 [target]
 instance01 ansible_host=192.168.10.20
 ```
@@ -245,7 +268,7 @@ instance01 ansible_host=192.168.10.20
 * Testez le ping ansible vers le serveur cible
 
 ```yaml
-$ ansible -i hosts target -m ping
+$ ansible -i inventaire target -m ping
 ```
 
 ## Quelques commandes utiles

@@ -152,15 +152,15 @@ Vérifiez sur la srtie de la commande précédente, dans la section `Containers`
 
 - Lancez le navigateur et accéder à l'url http://0.0.0.0:8086 puis utilisez les informations `MYSQL_USER` & `MYSQL_PASSWORD` définies à l'étape 4 pour se connecter
 
-<img width="50%" src="/img/part/03/08/phpmyadmin-login.png" />
+<img width="50%" src="../img/part/03/08/phpmyadmin-login.png" />
 
 - Dépilez la base de données `lecloudfacile` et vérifiez que les tables s'affiche bien.
 
-<img width="50%" src="/img/part/03/08/phpmyadmin-table.png" />
+<img width="50%" src="../img/part/03/08/phpmyadmin-table.png" />
 
 - Cliquez sur la table `users` et vérifiez que les données sont bien chargés.
 
-<img width="50%" src="/img/part/03/08/phpmyadmin-data.png" />
+<img width="50%" src="../img/part/03/08/phpmyadmin-data.png" />
 
 ## Insights
 

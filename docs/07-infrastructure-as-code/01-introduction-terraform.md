@@ -42,6 +42,7 @@ On parle le drift quand il y'a un changement manuelle de l'infra par rapport à 
 Cloudformation detecte automatiquement tout changement d'un infrastructure
 Terraform via le statefile
 
+
 `Comment le corrigé sur terraform?`
 via les commands refresh et plan 
 

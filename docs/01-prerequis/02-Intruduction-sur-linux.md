@@ -948,6 +948,103 @@ $ ip route show
 ping <adresse>
 ```
 
+## Outils de Diagnostic Réseau et Historique sous Linux
+
+### Netstat
+
+### Nslookup
+`nslookup` est un outil de diagnostic réseau pour interroger les serveurs DNS et obtenir des informations sur un nom de domaine ou une adresse IP.
+
+**Commandes courantes :**
+- **Rechercher l'adresse IP d'un domaine** :
+  ```bash
+  nslookup example.com
+  ```
+- **Trouver le serveur de messagerie associé à un domaine** :
+  ```bash
+  nslookup -query=mx example.com
+  ```
+
+### Traceroute
+`traceroute` montre le chemin emprunté par les paquets pour atteindre une destination, utile pour diagnostiquer les problèmes de routage et de latence réseau.
+
+**Commandes courantes :**
+- **Tracer la route vers une adresse IP ou un domaine** :
+  ```bash
+  traceroute example.com
+  ```
+- **Utiliser des paquets UDP ou ICMP pour tracer la route** :
+  ```bash
+  traceroute -I example.com
+  ```
+
+### Dig
+`dig` (Domain Information Groper) est un outil flexible pour interroger les serveurs DNS et effectuer des recherches de noms de domaine.
+
+**Commandes courantes :**
+- **Effectuer une recherche DNS de base** :
+  ```bash
+  dig example.com
+  ```
+- **Trouver les enregistrements MX pour un domaine** :
+  ```bash
+  dig example.com MX
+  ```
+- **Trouver les enregistrements NS pour un domaine** :
+  ```bash
+  dig example.com NS
+  ```
+
+### Nc (Netcat)
+`nc` ou `netcat` est un utilitaire polyvalent pour lire et écrire sur des connexions réseau en utilisant les protocoles TCP ou UDP.
+
+**Commandes courantes :**
+- **Écouter sur un port spécifique** :
+  ```bash
+  nc -l 1234
+  ```
+- **Se connecter à un port sur un serveur distant** :
+  ```bash
+  nc example.com 80
+  ```
+- **Envoyer un fichier via TCP** :
+  - Sur l’hôte récepteur :
+    ```bash
+    nc -l 1234 > received_file.txt
+    ```
+  - Sur l’hôte expéditeur :
+    ```bash
+    nc <destination_ip> 1234 < file_to_send.txt
+    ```
+
+### Telnet
+`telnet` est utilisé pour se connecter à des services réseau via le protocole Telnet, souvent pour des diagnostics et tests de connectivité.
+
+**Commandes courantes :**
+- **Se connecter à un serveur sur un port spécifique** :
+  ```bash
+  telnet example.com 80
+  ```
+- **Tester l'accès à un service HTTP** :
+  - Tapez `GET / HTTP/1.1` après la connexion pour tester une réponse du serveur.
+
+
+### History
+`history` affiche la liste des commandes récemment exécutées dans le terminal. C'est un outil utile pour revisiter les commandes précédentes et automatiser les tâches répétitives.
+
+**Commandes courantes :**
+- **Afficher l'historique des commandes** :
+  ```bash
+  history
+  ```
+- **Répéter la dernière commande** :
+  ```bash
+  !!
+  ```
+- **Exécuter une commande spécifique de l'historique** :
+  ```bash
+  !<numéro_de_commande>
+  ```
 
 ## Sécurité sous Linux (SSH et gestion des clés)
 

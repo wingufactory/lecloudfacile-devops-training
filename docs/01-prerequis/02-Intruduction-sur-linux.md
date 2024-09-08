@@ -952,99 +952,93 @@ ping <adresse>
 
 ### Netstat
 
+**Utilisation:** Affiche les connexions réseau, les tables de routage, les statistiques d'interface, etc.
+
+**Syntaxe:** `netstat [options]`
+
+**Exemple:**
+```
+$ netstat -tuln
+```
+**Explication:** Cette commande affiche toutes les connexions TCP (-t) et UDP (-u) actives, en mode numérique (-n) pour afficher les adresses IP et les numéros de port au lieu des noms, et seulement les sockets en état d'écoute (-l).
+
 ### Nslookup
 `nslookup` est un outil de diagnostic réseau pour interroger les serveurs DNS et obtenir des informations sur un nom de domaine ou une adresse IP.
 
-**Commandes courantes :**
+**Syntaxe:** `nslookup [nom_de_domaine/IP]`
+
+**Exemple:**
+```
+$ nslookup google.com
+```
+**Explication:** Cette commande interroge le serveur DNS configuré par défaut pour obtenir l'adresse IP associée au nom de domaine google.com.
+
 - **Rechercher l'adresse IP d'un domaine** :
-  ```bash
-  nslookup example.com
-  ```
+```bash
+nslookup example.com
+```
 - **Trouver le serveur de messagerie associé à un domaine** :
-  ```bash
-  nslookup -query=mx example.com
-  ```
+```bash
+nslookup -query=mx example.com
+```
 
 ### Traceroute
-`traceroute` montre le chemin emprunté par les paquets pour atteindre une destination, utile pour diagnostiquer les problèmes de routage et de latence réseau.
 
-**Commandes courantes :**
-- **Tracer la route vers une adresse IP ou un domaine** :
-  ```bash
-  traceroute example.com
-  ```
-- **Utiliser des paquets UDP ou ICMP pour tracer la route** :
-  ```bash
-  traceroute -I example.com
-  ```
+**Utilisation:** Affiche le chemin que les paquets prennent pour atteindre une destination réseau.
+
+**Syntaxe:** `traceroute [options] destination`
+
+**Exemple:**
+```
+$ traceroute google.com
+```
+**Explication:** Cette commande trace le chemin que les paquets prennent de votre machine à google.com, affichant chaque saut (routeur) sur le chemin et le temps nécessaire pour atteindre chaque saut.
 
 ### Dig
-`dig` (Domain Information Groper) est un outil flexible pour interroger les serveurs DNS et effectuer des recherches de noms de domaine.
 
-**Commandes courantes :**
-- **Effectuer une recherche DNS de base** :
-  ```bash
-  dig example.com
-  ```
-- **Trouver les enregistrements MX pour un domaine** :
-  ```bash
-  dig example.com MX
-  ```
-- **Trouver les enregistrements NS pour un domaine** :
-  ```bash
-  dig example.com NS
-  ```
+**Utilisation:** Outil avancé pour interroger les serveurs DNS.
+
+**Syntaxe:** `dig [options] nom_de_domaine [type]`
+
+**Exemple:**
+```
+$ dig google.com MX
+```
+**Explication:** Cette commande interroge les serveurs DNS pour obtenir les enregistrements MX (Mail eXchanger) de google.com, qui indiquent les serveurs de messagerie responsables de gérer les e-mails pour ce domaine.
 
 ### Nc (Netcat)
-`nc` ou `netcat` est un utilitaire polyvalent pour lire et écrire sur des connexions réseau en utilisant les protocoles TCP ou UDP.
 
-**Commandes courantes :**
-- **Écouter sur un port spécifique** :
-  ```bash
-  nc -l 1234
-  ```
-- **Se connecter à un port sur un serveur distant** :
-  ```bash
-  nc example.com 80
-  ```
-- **Envoyer un fichier via TCP** :
-  - Sur l’hôte récepteur :
-    ```bash
-    nc -l 1234 > received_file.txt
-    ```
-  - Sur l’hôte expéditeur :
-    ```bash
-    nc <destination_ip> 1234 < file_to_send.txt
-    ```
+**Utilisation:** Utilitaire réseau polyvalent pour lire/écrire des données à travers des connexions réseau.
+
+**Syntaxe:** `nc [options] [destination] [port]`
+
+**Exemple:**
+```
+$ nc -vz google.com 80
+```
+**Explication:** Cette commande tente d'établir une connexion avec google.com sur le port 80 (HTTP). L'option -v active le mode verbeux pour plus d'informations, et -z demande à nc de scanner pour un service d'écoute sans envoyer de données.
 
 ### Telnet
-`telnet` est utilisé pour se connecter à des services réseau via le protocole Telnet, souvent pour des diagnostics et tests de connectivité.
+**Utilisation:** Se connecte à un hôte sur un port spécifié.
 
-**Commandes courantes :**
-- **Se connecter à un serveur sur un port spécifique** :
-  ```bash
-  telnet example.com 80
-  ```
-- **Tester l'accès à un service HTTP** :
-  - Tapez `GET / HTTP/1.1` après la connexion pour tester une réponse du serveur.
+**Syntaxe:** `telnet [hôte] [port]`
 
+**Exemple:**
+```
+$ telnet example.com 80
+```
+**Explication:** Cette commande tente d'établir une connexion Telnet avec example.com sur le port 80. Cela peut être utilisé pour tester la connectivité ou pour interagir manuellement avec des services HTTP.
 
 ### History
-`history` affiche la liste des commandes récemment exécutées dans le terminal. C'est un outil utile pour revisiter les commandes précédentes et automatiser les tâches répétitives.
+**Utilisation:** Affiche l'historique des commandes exécutées.
 
-**Commandes courantes :**
-- **Afficher l'historique des commandes** :
-  ```bash
-  history
-  ```
-- **Répéter la dernière commande** :
-  ```bash
-  !!
-  ```
-- **Exécuter une commande spécifique de l'historique** :
-  ```bash
-  !<numéro_de_commande>
-  ```
+**Syntaxe:** `history [options]`
+
+**Exemple:**
+```
+$ history | grep ssh
+```
+**Explication:** Cette commande affiche toutes les lignes de l'historique des commandes qui contiennent le mot "ssh". C'est utile pour retrouver des commandes SSH précédemment utilisées.
 
 ## Sécurité sous Linux (SSH et gestion des clés)
 

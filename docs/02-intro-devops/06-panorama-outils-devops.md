@@ -18,6 +18,8 @@ Etant donné la richesse de l'ecosystème DevOps en matière d'outils et possibi
 
 <img src="../img/logo-app/trello.png" width="5%"/>  **Trello** est un outil de de planification et gestion de projet (en mode Kanban) de la suite atlassian (comme Jira mais gratuit et offrant moins de fonctionnalités)
 
+<br>
+
 ### Outils de gestion du code source
 
 <img src="../img/logo-app/github.png"  width="5%"/>  **GitHub** est une plateforme web d'hébergement de code et de référentiels GIT open source et privé. Il permet la collaboration de l'équipe lors de la phase de code de manière plus centralisé et efficace. Il offre une version gratuite et open-source en mode SAAS mais également des versions payantes permettant plus de cloisonnement et de sécurité.
@@ -25,7 +27,8 @@ Etant donné la richesse de l'ecosystème DevOps en matière d'outils et possibi
 <img src="../img/logo-app/gitlab.png"  width="5%"/>  **Gitlab** Concurrent de GitHub avec les memes fonctionnalités d'hébergement et de collaboration du code source. Il offre des versions en mode SAAS et self-managed pour plus d'indépendance et confidentialité dans la gestion des données hébergées.
 
 <img src="../img/logo-app/bitbucket.png"  width="5%"/>  **Bitbucket** Comme ses deux autres concurrents, c'est une plateforme d'hébergement et gestion du code source. L'avantage est qu'il s'interface de façon native avec les autres outils de la suite atlassian (comme Jira, trello, Confluence,...)
-<br />
+
+<br>
   
 ### Outils de build du code source 
 
@@ -41,7 +44,8 @@ En fonction du langage de programmation utilisé, on peut retrouver plusieurs ou
 
 <img src="../img/logo-app/harbor.png"  width="5%"/>  **Harbor** Outil Open source d'hébergement et gestion privée des images Docker 
 
-  \ 
+<br>
+
 ### Outils de tests 
 
 Lors de la phase de test, on peut retrouver plusieurs outils de tests automatisés permettant des tests unitaires, de performance, de qualité, de sécurité et d'intégration comme :
@@ -62,6 +66,7 @@ Lors de la phase de test, on peut retrouver plusieurs outils de tests automatis�
 
 <img src="../img/logo-app/checkmarx.png"  width="5%"/>  **Checkmarx SAST** Outil de test de sécurité applicatif
 
+<br>
 
 ### Outils d'orchestration de pipeline
 
@@ -75,6 +80,7 @@ Ces outils permettent l'automatisation, la gestion et l'orchestration de tout le
 
 On peut citer également des outils propriètaires comme **AWS CodeCatalyst** et **AWS Codepipeline** 
 
+<br>
 
 ### Outils de release management
 
@@ -86,6 +92,7 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 
 <img src="../img/logo-app/azure-devops.png"  width="5%"/>  **Azure DevOps** Outil complet de gestion de release permettant aux équipes de gérer les livraisons de bout en bout via des pipelines
 
+<br>
 
 ### Outils de déploiement (Phase Deploy)
 
@@ -95,6 +102,7 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 
 <img src="../img/logo-app/cloudformation.png"  width="5%"/>  **AWS Cloudformation** Outil propriètaire pour l'automatisation des infrastuctures AWS
 
+<br>
 
 ### Outils populaires d'orchestration et de management de la configuration
 
@@ -107,6 +115,8 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 <img src="../img/logo-app/puppet.png"  width="5%"/>  **Puppet** Pareil que Ansible. La différence majeure réside sur la méthode d'application des configurations en mode pull avec la mise en place d'agents puppet
 
 <img src="../img/logo-app/chef.png"  width="5%"/>  **Chef** Pareil que Puppet. La différence majeure réside dans l'approche impérative du code
+
+<br>
 
 ### Outils d'exploitation et de surveillance
 
@@ -123,7 +133,8 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 <img src="../img/logo-app/loki.png"  width="5%"/>  **Grafana Loki** Pareil que ELK pour la gestion centralisé des logs. Les deux sont gratuits mais celui ci est entièrement Open Source et s'intègre nativement avec Grafana
 
 <img src="../img/logo-app/rundeck.png"  width="5%"/>  **Rundeck** Outil Open source d'automatisation des taches d'admonistration de serveurs
-<bri>
+
+<br>
 
 ## Plus d'outils
 

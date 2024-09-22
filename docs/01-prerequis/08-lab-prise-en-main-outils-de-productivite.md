@@ -9,30 +9,42 @@ Environ 30 minutes
 ---
 
 ## Pré-requis
-- Un environnement Linux ou un conteneur Docker avec un accès terminal.
-- Les outils suivants installés : `Dive`, `ripgrep`, `direnv`, `LazyDocker`, `curlconverter`, `cheat.sh`, `TlDr`.
+- Un environnement Linux avec un accès terminal.
+- Les outils suivants installés : `TlDr`, `Dive`, `ripgrep`, `direnv`, `LazyDocker`, `curlconverter`, `cheat.sh`.
 
 ---
 
-## 1. Utilisation de Dive pour l'optimisation des images Docker
+## 1. Découverte et utilisation de l'outil tldr
 
-### Étapes :
-1. Téléchargez une image Docker, par exemple `nginx` :
-    ```bash
-    docker pull nginx
-    ```
-2. Utilisez `dive` pour analyser cette image :
-    ```bash
-    dive nginx
-    ```
-3. Analysez les couches de l'image et identifiez les fichiers ou couches inutiles.
-4. Notez les recommandations pour optimiser cette image. Vous pouvez les appliquer à vos propres images Docker par la suite.
+1. Installez tldr sur votre système d'exploitation. Utilisez la méthode appropriée selon votre OS :
+   - Pour Linux/macOS (avec npm) : `npm install -g tldr`
+   - Pour macOS (avec Homebrew) : `brew install tldr`
+   - Pour Windows (avec Chocolatey) : `choco install tldr`
 
-**Questions :**
-- Quelles couches de l’image Nginx sont les plus volumineuses ?
-- Comment pourriez-vous optimiser une image personnalisée basée sur les résultats de Dive ?
+2. Vérifiez que l'installation a réussi en tapant dans votre terminal :
+   ```
+   tldr --version
+   ```
 
----
+3. Utilisez tldr pour obtenir un résumé rapide de la commande `ls` :
+   ```
+   tldr ls
+   ```
+
+4. Comparez le résultat avec la page de manuel complète de `ls` (tapez `man ls` ou `ls --help`). Notez les différences.
+
+5. Trouvez le résumé tldr pour une commande que vous ne connaissez pas bien, par exemple `awk` ou `sed`.
+
+6. Utilisez tldr pour comprendre rapidement comment utiliser la commande `tar` pour créer une archive :
+   ```
+   tldr tar
+   ```
+
+7. Mettez à jour votre cache local de pages tldr :
+   ```
+   tldr --update
+   ```
+8. Trouvez une commande pour laquelle vous pensez que tldr serait particulièrement utile et expliquez pourquoi.
 
 ## 2. Utilisation de ripgrep pour la recherche dans un projet
 
@@ -116,25 +128,6 @@ Environ 30 minutes
 
 **Questions :**
 - Comment cheat.sh peut-il améliorer votre efficacité au quotidien ?
-
----
-
-## 6. Utilisation de TlDR pour obtenir des pages d’aide simplifiées
-
-### Étapes :
-1. Installez `tldr` si ce n’est pas déjà fait :
-    ```bash
-    sudo apt install tldr
-    ```
-2. Recherchez la documentation simplifiée de la commande `grep` :
-    ```bash
-    tldr grep
-    ```
-3. Utilisez une des commandes proposées sur un fichier de test.
-
-**Questions :**
-- En quoi TlDR est-il plus rapide et plus accessible que les pages `man` classiques ?
-
 ---
 
 ## Conclusion

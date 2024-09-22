@@ -104,7 +104,7 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 
 <br>
 
-### Outils populaires d'orchestration et de management de la configuration
+### Outils d'orchestration et de management de la configuration
 
 <img src="../img/logo-app/kubernetes.png"  width="5%"/>  **Kubernetes** Outil Open Source de gestion de l'orchestration des conteneurs Docker (automatise le déploiement, la gestion et la mise en échelle,...)
 

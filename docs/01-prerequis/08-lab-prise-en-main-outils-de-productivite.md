@@ -46,26 +46,62 @@ Environ 30 minutes
    ```
 8. Trouvez une commande pour laquelle vous pensez que tldr serait particulièrement utile et expliquez pourquoi.
 
-## 2. Utilisation de ripgrep pour la recherche dans un projet
+---
 
-### Étapes :
-1. Clonez un dépôt GitHub pour tester `ripgrep`. Par exemple :
-    ```bash
-    git clone https://github.com/tldr-pages/tldr.git
-    cd tldr
+## 2. Découverte et utilisation de ripgrep (rg)
+
+1. Installez ripgrep sur votre système :
+   - Pour Linux : Utilisez le gestionnaire de paquets de votre distribution
+   - Pour macOS : `brew install ripgrep`
+   - Pour Windows : `choco install ripgrep`
+
+2. Vérifiez l'installation en exécutant :
+   ```
+   rg --version
+   ```
+
+3. Créez un répertoire de test et quelques fichiers texte :
+
+   ```bash
+   mkdir rg_test
+   cd rg_test
+   echo "Hello, world!" > file1.txt
+   echo "Hello, lcfstudent!" > file2.md
+   echo "Bonjour le monde!" > file3.txt
+   ```
+
+4. Utilisez ripgrep pour chercher le mot "Hello" :
+   ```
+   rg Hello
+   ```
+
+5. Cherchez la phrase exacte "Hello, world!" :
+   ```
+   rg "Hello, world!"
+   ```
+
+6. Cherchez "Hello" en ignorant la casse :
+   ```
+   rg -i hello
+   ```
+
+7. Cherchez tous les fichiers contenant "monde" ou "world" :
+   ```
+   rg "monde|world"
+   ```
+
+8. Limitez la recherche aux fichiers .txt :
+   ```
+   rg Hello -g "*.txt"
+   ```
+
+9. Comparez la vitesse de ripgrep avec la commande grep standard :
     ```
-2. Utilisez `ripgrep` pour rechercher toutes les occurrences du mot "Linux" dans le projet :
-    ```bash
-    rg Linux
-    ```
-3. Filtrez les résultats pour n’afficher que les fichiers `.md` :
-    ```bash
-    rg Linux --glob '*.md'
+    time grep -r Hello .
+    time rg Hello
     ```
 
-**Questions :**
-- Combien d'occurrences du mot "Linux" avez-vous trouvé ?
-- Comment ripgrep se compare-t-il à l’utilisation de `grep` classique en termes de rapidité et de filtres ?
+10. Réfléchissez aux avantages de ripgrep par rapport à grep. Dans quels scénarios ripgrep serait-il particulièrement utile ?
 
 ---
 
@@ -97,27 +133,7 @@ Environ 30 minutes
 
 ---
 
-## 4. Utilisation de LazyDocker pour gérer vos conteneurs
-
-### Étapes :
-1. Lancez deux conteneurs Docker en arrière-plan :
-    ```bash
-    docker run -d nginx
-    docker run -d redis
-    ```
-2. Ouvrez `LazyDocker` pour surveiller et gérer ces conteneurs :
-    ```bash
-    lazydocker
-    ```
-3. Explorez les options disponibles dans LazyDocker pour arrêter, redémarrer et inspecter les logs de ces conteneurs.
-
-**Questions :**
-- Quelles informations LazyDocker vous fournit-il sur l'état des conteneurs ?
-- Comment pourrait-il simplifier la gestion de conteneurs dans un projet multi-conteneurs ?
-
----
-
-## 5. Utilisation de Cheat.sh pour accéder rapidement à des commandes
+## 4. Utilisation de Cheat.sh pour accéder rapidement à des commandes
 
 ### Étapes :
 1. Consultez rapidement des exemples d'utilisation pour la commande `tar` via `cheat.sh` :

@@ -18,7 +18,7 @@ Etant donné la richesse de l'ecosystème DevOps en matière d'outils et possibi
 
 <img src="../img/logo-app/trello.png" width="5%"/>  **Trello** est un outil de de planification et gestion de projet (en mode Kanban) de la suite atlassian (comme Jira mais gratuit et offrant moins de fonctionnalités)
 
-
+<br>
 ### Outils de gestion du code source
 
 <img src="../img/logo-app/github.png"  width="5%"/>  **GitHub** est une plateforme web d'hébergement de code et de référentiels GIT open source et privé. Il permet la collaboration de l'équipe lors de la phase de code de manière plus centralisé et efficace. Il offre une version gratuite et open-source en mode SAAS mais également des versions payantes permettant plus de cloisonnement et de sécurité.
@@ -27,6 +27,7 @@ Etant donné la richesse de l'ecosystème DevOps en matière d'outils et possibi
 
 <img src="../img/logo-app/bitbucket.png"  width="5%"/>  **Bitbucket** Comme ses deux autres concurrents, c'est une plateforme d'hébergement et gestion du code source. L'avantage est qu'il s'interface de façon native avec les autres outils de la suite atlassian (comme Jira, trello, Confluence,...)
 
+<br>
 ### Outils de build du code source 
 
 En fonction du langage de programmation utilisé, on peut retrouver plusieurs outils populaires s'intégrant facilement dans la partie CI de notre cycle d'automatisation comme :
@@ -39,8 +40,9 @@ En fonction du langage de programmation utilisé, on peut retrouver plusieurs ou
 
 <img src="../img/logo-app/nexus.png"  width="5%"/>  **Nexus** Outil Open source d'hébergement de packages et dépendances nécessaires aux applications (rpm, jar, war, sql, zip,.exe,...)
 
-<img src="../img/logo-app/github.png"  width="5%"/>  **Harbor** Outil Open source d'hébergement et gestion privée des images Docker 
+<img src="../img/logo-app/harbor.png"  width="5%"/>  **Harbor** Outil Open source d'hébergement et gestion privée des images Docker 
 
+<br>
 ### Outils de tests 
 Lors de la phase de test, on peut retrouver plusieurs outils de tests automatisés permettant des tests unitaires, de performance, de qualité, de sécurité et d'intégration comme :
 
@@ -60,6 +62,7 @@ Lors de la phase de test, on peut retrouver plusieurs outils de tests automatis�
 
 <img src="../img/logo-app/checkmarx.png"  width="5%"/>  **Checkmarx SAST** Outil de test de sécurité applicatif
 
+<br>
 ### Outils d'orchestration de pipeline
 Ces outils permettent l'automatisation, la gestion et l'orchestration de tout le cycle CI/CD à l'aide de pipelines
 
@@ -70,7 +73,8 @@ Ces outils permettent l'automatisation, la gestion et l'orchestration de tout le
 <img src="../img/logo-app/github.png"  width="5%"/>  **Github Actions** Comme ses deux autres compères, c'est une fonctionnalité de Github permettant l'automatisation des taches CI/CD via des workflows
 
 On peut citer également des outils propriètaires comme **AWS CodeCatalyst** et **AWS Codepipeline** 
- 
+
+<br> 
 ### Outils de release management
 Cette phase marque un controle de la fin de phase de l'intégration continue avant de procèder au déploiement du produit vers les environnements de production. Un ensemble d'outils peut etre utilisé pour favoriser une meilleure synchronisation des équipes de developpement et de déploiement tels que :
 
@@ -80,6 +84,7 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 
 <img src="../img/logo-app/azure-devops.png"  width="5%"/>  **Azure DevOps** Outil complet de gestion de release permettant aux équipes de gérer les livraisons de bout en bout via des pipelines
 
+<br>
 ### Outils de déploiement (Phase Deploy)
 
 <img src="../img/logo-app/terraform.png"  width="5%"/>  **Terraform** Outil d'instanciation et de provisionning automatisé d'infrastructures multi cloud et environnements (AWS, Azure, GCP, Openstack, On-Premise,..) 
@@ -88,6 +93,7 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 
 <img src="../img/logo-app/cloudformation.png"  width="5%"/>  **AWS Cloudformation** Outil propriètaire pour l'automatisation des infrastuctures AWS
 
+<br>
 ### Outils populaires d'orchestration et de management de la configuration
 
 <img src="../img/logo-app/kubernetes.png"  width="5%"/>  **Kubernetes** Outil Open Source de gestion de l'orchestration des conteneurs Docker (automatise le déploiement, la gestion et la mise en échelle,...)
@@ -100,6 +106,7 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 
 <img src="../img/logo-app/chef.png"  width="5%"/>  **Chef** Pareil que Puppet. La différence majeure réside dans l'approche impérative du code
 
+<br>
 ### Outils d'exploitation et de surveillance
 
 <img src="../img/logo-app/prometheus.png"  width="5%"/>  **Prometheus** Outil Open source de surveillance des infrastructures et applications. Il collecte, organise et stocke les donnéess (métriques) dans une base de données
@@ -116,7 +123,7 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 
 <img src="../img/logo-app/rundeck.png"  width="5%"/>  **Rundeck** Outil Open source d'automatisation des taches d'admonistration de serveurs
 
-
+<br>
 ## Plus d'outils
 
 - Tableau périodique des outils DevOps --> https://digital.ai/learn/devsecops-periodic-table/
@@ -127,8 +134,8 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 
 ## Points Clés
 
-Cependant il est à noter que le choix de ces outils doit passer par une phase de compréhension des besoins spécifiques de l'entreprise pour éviter au maximum la multiciplicité d'outils et usages. 
-Il est donc essentiel de prendre en compte quelques facteurs lors de la selection de ces différents outils DevOps :
+Il est à noter que le choix de ces outils doit passer par une phase de compréhension des besoins spécifiques de l'entreprise pour éviter au maximum la multiciplicité d'outils et usages. 
+Il sera donc essentiel de prendre en compte quelques facteurs lors de la selection de ces différents outils DevOps :
 
 - **Identification des étapes clés** de développement de notre produit afin de maitriser le cycle de vie de notre application
 - **Analyse et évaluation des ressources existantes** afin de s'assurer que les outils choisis seront compatibles avec notre infrastructure et éviter de dupliquer les outils
@@ -143,6 +150,5 @@ L'ecosystème des outils DevOps est actuellement l'un des plus dynamique sur le 
 - Obsolescence rapide de certaines technologies 
 - Retrait des licences Open source et/ou rachat de certaines technos par les grosses entreprises
 
-Une bonne application des principes DevOps passera donc forcément par une utilisation avec parcimonie de quelques uns de ces outils.
-Ce qu'on pourra découvrir dans la suite de ce parcours.
+Une bonne application des principes DevOps passera donc forcément par une utilisation avec parcimonie de quelques uns de ces outils qu'on pourra découvrir dans la suite de ce parcours.
 

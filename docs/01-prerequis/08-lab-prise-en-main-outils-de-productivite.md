@@ -10,7 +10,7 @@ Environ 30 minutes
 
 ## Pré-requis
 - Un environnement Linux avec un accès terminal.
-- Les outils suivants installés : `TlDr`, `Dive`, `ripgrep`, `direnv`, `LazyDocker`, `curlconverter`, `cheat.sh`.
+- Les outils suivants installés : `TlDr`, `ripgrep`, `direnv`, `cheat.sh`.
 
 ---
 
@@ -107,44 +107,67 @@ Environ 30 minutes
 
 ## 3. Utilisation de direnv pour la gestion des variables d'environnement
 
-### Étapes :
 1. Installez `direnv` si ce n'est pas déjà fait, puis activez-le dans votre shell :
     ```bash
     echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
     source ~/.bashrc
     ```
+
 2. Créez un répertoire dédié au lab et placez-vous dedans :
     ```bash
     mkdir ~/direnv_lab && cd ~/direnv_lab
     ```
+
 3. Créez un fichier `.envrc` et définissez des variables d’environnement spécifiques :
     ```bash
     echo 'export MY_VAR="Hello DevOps"' > .envrc
     direnv allow
     ```
+
 4. Vérifiez que la variable d’environnement est bien chargée :
     ```bash
     echo $MY_VAR
     ```
 
-**Questions :**
-- Comment direnv facilite-t-il la gestion des environnements variables par projet ?
-- Que se passe-t-il si vous changez de répertoire et revenez dans celui-ci ?
+5. Comment direnv facilite-t-il la gestion des environnements variables par projet ?
 
 ---
 
-## 4. Utilisation de Cheat.sh pour accéder rapidement à des commandes
+## 4. Découverte et utilisation de cheat.sh
 
-### Étapes :
-1. Consultez rapidement des exemples d'utilisation pour la commande `tar` via `cheat.sh` :
-    ```bash
-    curl https://cheat.sh/tar
-    ```
-2. Testez certaines des commandes proposées sur vos propres fichiers.
+1. Assurez-vous que curl est installé sur votre système.
 
-**Questions :**
-- Comment cheat.sh peut-il améliorer votre efficacité au quotidien ?
+2. Obtenez un aide-mémoire pour la commande tar :
+   ```
+   curl cheat.sh/tar
+   ```
+
+3. Recherchez des informations sur l'utilisation de la commande find :
+   ```
+   curl cheat.sh/find
+   ```
+
+4. Cherchez comment compresser des fichiers avec zip :
+   ```
+   curl cheat.sh/zip
+   ```
+   
+5. Obtenez des exemples de boucles for en Python :
+   ```
+   curl cheat.sh/python/for
+   ```
+   
+6. Vous pouvez également interroger plusieurs commandes à la fois :
+   ```
+   curl cheat.sh/find+rm
+   curl cheat.sh/ls+grep
+   ```
+   
+7. Comparez cheat.sh avec d'autres outils comme man ou tldr. Quels sont ses avantages et inconvénients ?
+
+8. Identifiez une situation dans votre travail quotidien où cheat.sh pourrait être particulièrement utile.
+
 ---
 
 ## Conclusion
-Dans ce lab, vous avez exploré quelques outils Linux qui augmentent la productivité en vous familiarisant avec des scénarios courants dans les environnements DevOps. Vous pouvez désormais utiliser ces outils pour optimiser la gestion de vos conteneurs, automatiser des tâches, et accéder rapidement à des informations cruciales. N'hésitez pas à intégrer ces outils dans vos workflows DevOps pour maximiser votre efficacité.
+Dans ce lab, vous avez exploré quelques outils Linux qui augmentent la productivité en vous familiarisant avec des scénarios courants dans les environnements DevOps. Vous pouvez désormais utiliser ces outils pour automatiser des tâches, et accéder rapidement à des informations cruciales. N'hésitez pas à intégrer ces outils dans vos workflows DevOps pour maximiser votre efficacité.

@@ -2,45 +2,45 @@ site_name: LeCloudFacile DevOps Training
 site_url: https://lecloudfacile.com/
 nav:
   - Présentation Générale:
-    - Home: 'index.md'
-    - Syllabus: '00-presentation/syllabus.md'
-    - Team: '00-presentation/team.md'
-  - Contenu Pedagogique:
-    - Prerequis:
-      - 'Cours': '01-prerequis/cours.md'
-      - 'Lab': '01-prerequis/lab.md'
-    - Introduction DevOps:
-      - 'Cours': '02-intro-devops/cours.md'
-      - 'Lab': '02-intro-devops/lab.md'
-    - Conteneurisation:
-      - 'Cours': '03-conteneurisation/cours.md'
-      - 'Lab': '03-conteneurisation/lab.md'
-    - Intégration continue:
-      - 'Cours': '04-integration-continue/cours.md'
-      - 'Lab': '04-integration-continue/lab.md'
-    - Tests continus:
-      - 'Cours': '05-tests-continus/cours.md'
-      - 'Lab': '05-tests-continus/lab.md'
-    - Configuration Management:
-      - 'Cours': '06-configuration-management/cours.md'
-      - 'Lab': '06-configuration-management/lab.md'
-    - Infrastrcuture as Code:
-      - 'Cours': '07-infrastructure-as-code/cours.md'
-      - 'Lab': '07-infrastructure-as-code/lab.md'
-    - Livraison Continue:
-      - 'Cours': '08-livraison-continue/cours.md'
-      - 'Lab': '08-livraison-continue/lab.md'
-    - Déploiement Continue:
-      - 'Cours': '09-deploiement-continue/cours.md'
-      - 'Lab': '09-deploiement-continue/lab.md'
-    - Exploitation:
-      - 'Cours': '10-exploitation/cours.md'
-      - 'Lab': '10-exploitation/lab.md'
-  - Exercices:
+    - 'Home': index.md
+    - 'Syllabus': 00-presentation/syllabus.md
+    - 'Team': 00-presentation/team.md
+  - 'Prerequis':
+    - '01 - cours': 01-prerequis/cours.md
+    - '01 - Lab': 01-prerequis/lab.md
+  - 'Introduction DevOps':
+    - '02 - cours': '02-intro-devops/cours.md'
+    - '02 - Lab': '02-intro-devops/lab.md'
+  - 'Conteneurisation':
+    - 'Cours': '03-conteneurisation/cours.md'
+    - 'Lab': '03-conteneurisation/lab.md'
+  - 'Intégration continue':
+    - 'Cours': '04-integration-continue/cours.md'
+    - 'Lab': '04-integration-continue/lab.md'
+  - 'Tests continus':
+    - 'Cours': '05-tests-continus/cours.md'
+    - 'Lab': '05-tests-continus/lab.md'
+  - 'Configuration Management':
+    - 'Cours': '06-configuration-management/cours.md'
+    - 'Lab': '06-configuration-management/lab.md'
+  - 'Infrastrcuture as Code':
+    - 'Cours': '07-infrastructure-as-code/cours.md'
+    - 'Lab': '07-infrastructure-as-code/lab.md'
+  - 'Livraison Continue':
+    - 'Cours': '08-livraison-continue/cours.md'
+    - 'Lab': '08-livraison-continue/lab.md'
+  - 'Déploiement Continue':
+    - 'Cours': '09-deploiement-continue/cours.md'
+    - 'Lab': '09-deploiement-continue/lab.md'
+  - 'Exploitation':
+    - 'Cours': '10-exploitation/cours.md'
+    - 'Lab': '10-exploitation/lab.md'
+  - 'Exercices':
     - 'Lab01': 'exercices/lab01.md'
     - 'Solution01': 'exercices/solution01.md'
 
 theme: readthedocs
+extra_css: [style.css]
 markdown_extensions:
   - toc:
       permalink: "#"

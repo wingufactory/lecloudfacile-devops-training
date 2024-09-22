@@ -1,5 +1,7 @@
 # [Intitulé du cours]
 
+
+
 ## Objectifs
 
 Décriver brivement 2 ou 3 objectifs fondamentaux du cours sous forme de paragraphe ou de bullets (au choix)

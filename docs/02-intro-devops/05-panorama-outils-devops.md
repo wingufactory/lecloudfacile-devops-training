@@ -102,6 +102,8 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 
 <img src="../img/logo-app/cloudformation.png"  width="5%"/>  ***AWS Cloudformation*** Outil propriètaire pour l'automatisation des infrastuctures AWS
 
+<img src="../img/logo-app/vagrant.png"  width="5%"/>  ***Vagrant*** Outil Open source pour la création et configuration d'environnements
+
 <br>
 
 ### Outils d'orchestration et de management de la configuration
@@ -135,6 +137,15 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 <img src="../img/logo-app/rundeck.png"  width="5%"/>  ***Rundeck*** Outil Open source d'automatisation des taches d'admonistration de serveurs
 
 <br>
+
+### Outils de sécurisation des secrets
+
+<img src="../img/logo-app/hashicorpvault.png"  width="5%"/>  ***Hashicorp Vault*** Outil de la suite Hashicorop permettant de stocker et sécuriser les informations sensibles telles que les identifiants/mot de passe de nos applications. IL propose une API et des intégrations avec la plupart des autres outils pour la récuperation et mise à jour de ces credentials. 
+
+<img src="../img/logo-app/aws-secret-manager.png"  width="5%"/>  ***AWS Secret Manager*** Comme hashicorp vault, il permet le stockage et la sécurisation de secrets sur AWS. Il offre aussi la possibilité d'auto-rotation de ces identifiants tout en prenant le soin de les mettre à jour au niveau des services AWS correspondants
+
+<img src="../img/logo-app/azure-key-vault.png"  width="5%"/>  ***Azure Key Vault*** Outil de gestion de secret comme les deux précèdents mais sur Azure
+
 
 ## Plus d'outils
 

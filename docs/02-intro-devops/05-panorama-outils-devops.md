@@ -134,9 +134,11 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 
 <img src="../img/logo-app/loki.png"  width="5%"/>  ***Grafana Loki*** Pareil que ELK pour la gestion centralisé des logs. Les deux sont gratuits mais celui ci est entièrement Open Source et s'intègre nativement avec Grafana
 
-<img src="../img/logo-app/rundeck.png"  width="5%"/>  ***Rundeck*** Outil Open source d'automatisation des taches d'admonistration de serveurs
+<img src="../img/logo-app/splunk.png"  width="5%"/>  ***Splunk*** Outil propriètaire de gestion centralisé de logs
+ 
+<img src="../img/logo-app/rundeck.png"  width="5%"/>  ***Rundeck*** Outil Open source d'automatisation des taches d'administration de serveurs
 
-<br>
+</br>
 
 ### Outils de sécurisation des secrets
 
@@ -145,6 +147,12 @@ Cette phase marque un controle de la fin de phase de l'intégration continue ava
 <img src="../img/logo-app/aws-secret-manager.png"  width="5%"/>  ***AWS Secret Manager*** Comme hashicorp vault, il permet le stockage et la sécurisation de secrets sur AWS. Il offre aussi la possibilité d'auto-rotation de ces identifiants tout en prenant le soin de les mettre à jour au niveau des services AWS correspondants
 
 <img src="../img/logo-app/azure-key-vault.png"  width="5%"/>  ***Azure Key Vault*** Outil de gestion de secret comme les deux précèdents mais sur Azure
+
+## Outils pipeline CI-CD
+
+En reprenant l'exemple de processus CI-CD du cours précédent, on peut retrouver pour chaque étape un ensemble d'outils populaires.
+
+![Outils CI-CD complet](../img/tools-CICD-complet.png)
 
 
 ## Plus d'outils

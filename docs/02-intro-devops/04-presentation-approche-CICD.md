@@ -8,7 +8,7 @@
 
 ## Processus traditionnel de livraison d'un produit (logiciel)
 
-On a vu précédemment que le DevOps agit d'abord sur les personnes et les processus en mettant en oeuvre une philosophie commune de collaboration entre les developpeurs et les opérationnels. Et ceci n'est rendu possible que par la mise en place d'un ensemble de pratiques mettant l'automatisation au coeur de cette nouvelle philosophie. 
+On a vu précédemment que le DevOps agit d'abord sur les personnes et les processus en mettant en oeuvre une philosophie commune de collaboration entre les developpeurs et les opérationnels. Et ceci n'est rendu possible que par la mise en place d'un ensemble de pratiques mettant l'automatisation au coeur de cette nouvelle philosophie.</br>
 Avant de définir ce qu'est le CI-CD, intéressons nous d'abord au processus traditionnel de livraison d'une application.<br>
 
 ![Processus traditionnel de développement et livraison logiciel](../img/processus-tradi.png)
@@ -21,9 +21,9 @@ Traditionnellement, le cycle de vie d'une application suivait ce schéma présen
 - En cas de bugs, dysfonctionnements ou produit non conforme par rapport aux exigences métiers, ces derniers informent l'équipe de développement qui vont corriger le bug et repasser par le meme chemin. Cette unique étape peut prendre plusieurs semaines.
 - Une fois le produit conforme et validé, les opérationnels prennent le relais pour l'envoyer en environnement de pre-production (ou autres) pour d'éventuels tests de performance avant de le livrer en production pour le rendre accessible au public
 
-Ce chemin classique prend en général un temps relativement conséquent (plusieurs semaines à plusieurs mois) entre la phase de code et son déploiement aux clients.
-Et il en découle plusieurs aller-retour incessant générateurs de beaucoup de frustrations et de tensions entre les différentes parties prenantes (Dev, testeurs, opérationnels)
-De plus tout rajout de nouvelles fonctionnalités n'est pas la bienvenue avec cette aproche qui ne favorise pas l'agilité.
+Ce chemin classique prend en général un temps relativement conséquent (plusieurs semaines à plusieurs mois) entre la phase de code et son déploiement aux clients.</br>
+Et il en découle plusieurs aller-retour incessant générateurs de beaucoup de frustrations et de tensions entre les différentes parties prenantes (Dev, testeurs, opérationnels). </br>
+De plus tout rajout de nouvelles fonctionnalités n'est pas la bienvenue avec cette aproche qui ne favorise pas l'agilité.</br>
 Ceci étant du :
 - au cloisonnement entre les équipes
 - à des processus manuels générateurs de pas mal d'erreurs humaines

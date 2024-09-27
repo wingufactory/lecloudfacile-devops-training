@@ -31,11 +31,11 @@ Ceci étant du :
 
 ## Définition et principe
 
-C'est là que la pratique CI-CD vient à la rescousse !
-Le **CICD** est juste un ensemble de process, outils et techniques pour mieux gérer et automatiser la livraison d'applications, de la production du code à la construction, au test, packaging et déploiement avec l'aide de "pipelines" automatisés.
-De ce fait, le déploiement vers la production ne necessitera plus toutes ces interventions manuelles et retours en cas de non-conformité mais plutot à une série d'actions executées les uns à la suite des autres de façon automatisé qu'on appelle pipeline CI/CD.
-Le **CI** pour dire **C**ontinuous **I**ntegration (Intégration Continue) et le **CD** pour **C**ontinuous **D**elivery (Livraison Continue) ou **C**ontinuous **D**eployment (Déploiement Continu).
-Ainsi toutes les 8 étapes identifiées dans le cycle de vie d'une application pourront etre entièrement automatisées. 
+C'est là que la pratique CI-CD vient à la rescousse ! </br>
+Le **CICD** est juste un ensemble de process, outils et techniques pour mieux gérer et automatiser la livraison d'applications, de la production du code à la construction, au test, packaging et déploiement avec l'aide de "pipelines" automatisés.</br>
+De ce fait, le déploiement vers la production ne necessitera plus toutes ces interventions manuelles et retours en cas de non-conformité mais plutot à une série d'actions executées les uns à la suite des autres de façon automatisé qu'on appelle pipeline CI/CD.</br>
+Le **CI** pour dire **C**ontinuous **I**ntegration (Intégration Continue) et le **CD** pour **C**ontinuous **D**elivery (Livraison Continue) ou **C**ontinuous **D**eployment (Déploiement Continu).</br>
+Ainsi toutes les 8 étapes identifiées dans le cycle de vie d'une application pourront etre entièrement automatisées. </br>
 Lorsqu'un code est poussé sur un référentiel de gestion de code (tel que GIT), un pipeline est déclenché pour automatiser le build, tests et déploiement vers les environnements cibles.
 
 ![CI-CD](../img/CICD-loop.png)
@@ -67,8 +67,8 @@ L'objectif de cette phase est d'obtenir un produit toujours fonctionnel.
 
 ### Livraison Continue (CD)
 
-De son coté, la livraison continue désigne le fait de déployer de façon continue et automatisée un produit de sa phase de code jusqu'en production. Cependant il nécessite une intervention manuelle avant le déploiement final en production.
-Arpès l'intégration continue, le package est pris en compte par le pipeline de livraison continue, gèré par les opérationnels, qui permettra de l'acheminer vers les environnements de production via des scripts automatisés.
+De son coté, la livraison continue désigne le fait de déployer de façon continue et automatisée un produit de sa phase de code jusqu'en production. Cependant il nécessite une intervention manuelle avant le déploiement final en production.</br>
+Arpès l'intégration continue, le package est pris en compte par le pipeline de livraison continue, gèré par les opérationnels, qui permettra de l'acheminer vers les environnements de production via des scripts automatisés.</br>
 Des tests de performance automatisés peuvent etre executés dans les environnements de pre-prduction avant qu'une intervention manuelle ne l'achemine vers le public concerné.
 
 L'objectif de cette phase est d'obtenir un produit toujours accessible.
@@ -78,14 +78,14 @@ L'objectif de cette phase est d'obtenir un produit toujours accessible.
 
 ### Déploiement Continue (CD)
 
-Le déploiement continu est pareil que la livraison continue. La seule différence résidant sur le fait que le produit est acheminé automatiquement en production sans necessiter une intervention manuelle.
+Le déploiement continu est pareil que la livraison continue. La seule différence résidant sur le fait que le produit est acheminé automatiquement en production sans necessiter une intervention manuelle.</br>
 Le pipeline est automatisé de bout en bout.
 
 L'objectif de cette phase est d'obtenir un produit toujours validé et fonctionnel délivré au client.
 
 ![Déploiement Continu](../img/continuous-deployment.png)
 
-
+</br>
 
 En fonction des entreprises, du contexte et des usages, on peut avoir le choix d'utiliser soit une livraison continue ou un déploiement continu.
 
@@ -93,6 +93,6 @@ En fonction des entreprises, du contexte et des usages, on peut avoir le choix d
 
 ## Conclusion
 
-L'application du DevOps repose techniquement sur l'utilisation de l'approche CICD qui consiste à automatiser tout le cycle de vie et de déploiement d'une application.
-De façon plus concret, cela n'est possible qu'avec l'utilisation commune d'un ensemble d'outils sur chacune de ces phases pour un pipeline automatisé de bout en bout.
+L'application du DevOps repose techniquement sur l'utilisation de l'approche CICD qui consiste à automatiser tout le cycle de vie et de déploiement d'une application.</br>
+De façon plus concret, cela n'est possible qu'avec l'utilisation commune d'un ensemble d'outils sur chacune de ces phases pour un pipeline automatisé de bout en bout.</br>
 Ce qu'on va décrouvrir sur le prochain cours.

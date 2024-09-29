@@ -38,7 +38,7 @@ Il existe deux types d'outils IaC :
 ### Cycle de vie de l'infrastructure
 L'infrastructure a un cycle de vie qui suit les étapes du DevOps (planification, conception, construction, test, livraison, maintenance, et retrait). L'IaC améliore ce cycle de vie en garantissant l'idempotence, facilitant la gestion des changements et réduisant les risques d'erreurs humaines.
 
-[The software lifecycle in the cloud age]("https://codilime.com/blog/day-0-day-1-day-2-the-software-lifecycle-in-the-cloud-age")
+[The software lifecycle in the cloud age](https://codilime.com/blog/day-0-day-1-day-2-the-software-lifecycle-in-the-cloud-age)
 
 [reference IaC: principles, patterns, and best practices ](https://shahadarsh.com/2020/07/12/principles-patterns-and-practices-for-effective-infrastructure-as-code/)
 
@@ -90,7 +90,7 @@ Le **drift** se produit lorsque l'état réel de l'infrastructure diverge de ce 
 - Compagnie spécialisé dans la gestion d'outil open-source multi-platforme
 - Quelque Produits: Terraform, Terraform Cloud, Vagrant, Vault...
 
-[reference HashiCorp](https://www.hashicorp.com/about)
+[Reference HashiCorp](https://www.hashicorp.com/about)
 
 [Reference Teraform](https://www.terraform.io/intro/index.html#infrastructure-as-code)
 

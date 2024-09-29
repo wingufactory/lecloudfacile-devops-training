@@ -6,13 +6,9 @@ Ce lab vous permettra de prendre en main plusieurs outils de productivité sous 
 ## Durée
 Environ 30 minutes
 
----
-
 ## Pré-requis
 - Un environnement Linux avec un accès terminal.
 - Les outils suivants installés : `TlDr`, `ripgrep`, `direnv`, `cheat.sh`.
-
----
 
 ## 1. Découverte et utilisation de l'outil tldr
 

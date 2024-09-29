@@ -9,18 +9,16 @@
 - Install Selenium
 - Deploiement des services sur docker
 
-
 ### Prerequis
 
 - Connaissance Docker
 - Install Docker avec une allocation d'au moins 4G de memoire
 
-
 ## Déroulement du Lab
 
 ### Etape 1: Recuperation du code
 
-```
+```sh
 git clone https://github.com/wingufactory/lecloudfacile-devops-labs.git
 cd lecloudfacile-devops-labs/05-tests-continus/selenim
 ```
@@ -85,7 +83,7 @@ services:
 
 
 
-### Etape 3: Demarrage d'airflow
+### Etape 3: Demarrage de Selenium hub et des nodes
 
 Démarrage des services:
 
@@ -98,8 +96,11 @@ docker-compose up -d
 Après le démarrage des services, l'interface Selenium est disponible http://localhost:4444
 
 Nous pouvons ensuite inspecter ce qui s'exécute dans le navigateur du conteneur en cliquant sur :
+
 chrome -> http://localhost:7901/?autoconnect=1&resize=scale&password=secret
+
 firefox -> http://localhost:7902/?autoconnect=1&resize=scale&password=secret
+
 edge -> http://localhost:7903/?autoconnect=1&resize=scale&password=secret
 
 

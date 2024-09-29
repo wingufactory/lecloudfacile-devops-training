@@ -20,7 +20,7 @@
 
 ```sh
 git clone https://github.com/wingufactory/lecloudfacile-devops-labs.git
-cd lecloudfacile-devops-labs/05-tests-continus/selenim
+cd lecloudfacile-devops-labs/05-tests-continus/selenium-on-docker
 ```
 
 ### Etape 2: Analyse du manifeste docker compose

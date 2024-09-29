@@ -8,11 +8,11 @@
 
 ## Sommaire
 
-- [Titre01]
+- Concept de Tests Continus
 
-- [Titre02]
+- Différents types de tests
 
-- [Titre03]
+- Pipeline de tests continus
 
 
 

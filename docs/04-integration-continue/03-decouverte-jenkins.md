@@ -22,6 +22,8 @@ L'architecture de Jenkins est simple mais puissante, conçue pour être extensib
 3. **Build et Test** : Jenkins déclenche le build, exécute les tests, et compile le projet.
 4. **Reporting** : Jenkins collecte les résultats, génère des rapports et notifie les équipes en cas de succès ou d'échec.
 
+![Jenkins Workflow ](../img/jenkins-workflow.jpg)
+
 ---
 
 ## 2. Fonctionnalités de Jenkins

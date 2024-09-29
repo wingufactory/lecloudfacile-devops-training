@@ -1,4 +1,4 @@
-# LAB : Exploitation - Airflow sur Docker 
+# LAB : Exploitation - Selenium sur Docker 
 
 **🕘 : 10 minutes**
 
@@ -6,9 +6,8 @@
 
 ### Objectifs
 
-- Install Airflow
+- Install Selenium
 - Deploiement des services sur docker
-- Creation d'un DAG
 
 
 ### Prerequis

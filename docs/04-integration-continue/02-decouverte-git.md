@@ -151,6 +151,25 @@ Git utilise un modèle de branches léger et flexible pour la gestion des modifi
     git pull origin <nom-branche>
     ```
 
+### 6. Opérations de retour en arrière (Rollback)
+- **Annuler un commit sans modifier l'historique du référentiel** :
+
+    ```bash
+    git revert <commit>
+    ```
+
+- **Annuler un commit en le supprimant et en réécrivant l'historique** :
+
+    ```bash
+    git reflog : pour afficher l'historique des commits et identifier les pointeurs
+    git reset --hard <identifiant pointeur>
+    ```
+
+<br>
+
+Pour s'entrainer visuellement à l'utilisation des différentes opérations de Git, une application fort intéressante autant pour les débutants que les plus expérimentés --> https://learngitbranching.js.org/?locale=fr_FR
+
+
 ## 4. Workflows Git
 
 Les workflows Git sont des stratégies pour organiser et gérer les branches et les versions du code. Ils aident les équipes à collaborer efficacement tout en maintenant une base de code stable.

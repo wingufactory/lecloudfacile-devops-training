@@ -430,7 +430,7 @@ $ head -n 100 monfichier.txt
 ```
 
 
-### `head`
+### `tail`
 
 **Utilisation:** affichage des dernières lignes d'un fichier (10 lignes par défaut).
 

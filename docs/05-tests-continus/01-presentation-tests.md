@@ -23,7 +23,7 @@
 On a pu voir précédemment comment déployer de façon automatisé une application avec la pratique de l'intégration continue. Cette pratique nous permet de pouvoir rapidement intégrer et déployer notre produit en quelques minutes tout en assurant une certaine consistance et cohérence à travers les différentes étapes de code, build, release et déploiement.</br>
 Dans cette partie, il s'agira de mieux expliciter le concept de tests continus qui est aussi une étape cruciale dans le cadre de la mise en oeuvre d'un pipeline d'intégration et de déploiement continu.</br>
 </br>
-Dans le cycle de vie d'une application, les scénarios de tests occupent une place centrale et générent beaucoup d'efforts et de temps consommé. On sait tous qu'un code non testé n'a aucun sens, ainsi un pipeline sans des étapes de test est également un pipeline sans utilité.</br>
+Dans le cycle de vie d'une application, les scénarios de tests occupent une place centrale et générent beaucoup d'efforts et de temps consommé. Un code non testé présente une probabilité élevée d'apparition de bugs, de faille de sécurité, de non-conformité aux spécifications techniques, fonctionneles & non fonctionnelles, etc. Voilà pourquoi il est utile d'inclure des étapes de test dans les pipelines utilisés tout au long du cycle de vie de l'application.</br>
 De ce fait les développeurs, testeurs et opérationnels implémentent différentes stratégies de tests pour s'assurer que le produit répond bien aux critères de qualité, sécurité, performance et exigences métiers.</br>
 Le produit passe ainsi sur différents environnements (test, recette, pré-production,...) pour y subir une batterie de tests.
 </br>

@@ -17,9 +17,9 @@ Dans ce lab, on va voir ensemble comment créer et dérouler un scénario de tes
 - Etre sur un windows, macOs ou une distribution linux avec interface graphique
 - Avoir java (à partir de la version 8 et plus) d'installé sur son poste
 
-Pour *Windows* -> https://www.guru99.com/install-java.html
-Pour *MacOS*   -> https://tejaksha-k.medium.com/a-step-by-step-guide-to-installing-java-on-macos-5188bfdf99d7  
-Pour *Linux*   -> https://www.java.com/fr/download/help/linux_x64_install.html
+Pour *Windows* -> https://www.guru99.com/install-java.html <br> 
+Pour *MacOS*   -> https://tejaksha-k.medium.com/a-step-by-step-guide-to-installing-java-on-macos-5188bfdf99d7 <br>
+Pour *Linux*   -> https://www.java.com/fr/download/help/linux_x64_install.html  
 
 ## Déroulement du Lab
 
@@ -31,7 +31,7 @@ Ouvrir un terminal et lancer la commande ci-dessous pour vérifier que Java est 
 java -version
 ```
 
-Si java non installé, suivre les documentations dans la partie pré-requis pour installer java selon le système d'exploitation utilisé
+Si java non installé, suivre les documentations dans la partie pré-requis pour installer java selon le système d'exploitation utilisé.
 Ensuite vérifier si la variable `JAVA_HOME` est bien configuré si on est sur macos ou sur linux    
 ```sh
 echo $JAVA_HOME
@@ -74,14 +74,14 @@ jmeter
 
 L'interface d'Apache jmeter se lance et apparaitra comme ci-dessous :
 
-<img src="../img/jmeter-img/lancement-jmeter-gui"  width="50%"/>  
+<img src="../img/jmeter-img/lancement-jmeter-gui.png"  width="50%"/>  
 
 ### Etape 4: Création d'un scénario de test de charge depuis la GUI de Jmeter
 
 Maintenant on va créer et configurer notre scénario de test de charge vers une application web.
 On va prendre comme scénario, un test de charge de 20 utilisateurs sur le site github qui héberge nos labs de cloudfacile -> https://github.com/wingufactory/lecloudfacile-devops-labs
 
-<img src="../img/jmeter-img/test-charge-gui.png"  width="50%"/>
+![Test de charge GUI](../img/jmeter-img/test-charge-gui.png)
 
 - Ajout d'un groupe de Threads (groupe d'utilisateurs) au plan de test pour configurer le nombre d'utilisateurs nécessaires pour le test de charge
 ```sh
@@ -92,11 +92,11 @@ Clic-droit sur le plan -> Add -> Thread (Users) -> Thread Group.
 
 - Configuration des threads
 
-`Number of Threads (users)=20` : nombre d'utlisateurs à simuler pour notre test de charge  
-`ramp-up period(seconds)=2` : nombre de secondes que nos 20 utilisateurs vont passer pour rentrer dans le système (durée de montée de charge). Supposons que les applications que nous proposons dans notre test doivent être testées pour 10000 utilisateurs. Il n'est pas très réaliste de laisser les 10000 utilisateurs entrer dans le système en même temps. Le temps de montée en puissance détermine le nombre de secondes pendant lesquelles 10000 utilisateurs seront inclus dans le système par l'outil de test. Dans notre exemple, la valeur de 2 secondes veut dire que nos 20 utilisateurs vont mettre 2s à rentrer dans le système (donc vont effectuer une action sur le site cible à tester), ce qui fait qu'on aura 10 utilisareurs dans le système par seconde. si on n'avait mis le nombres de threads à 10000 et ramp-up à 20 secondes, Jmeter simulera 500 utilisateurs par seconde pour avoir 10000 utilisateurs actifs à la fin de ces 20 secondes.  
+`Number of Threads (users)=20` : nombre d'utlisateurs à simuler pour notre test de charge <br>
+`ramp-up period(seconds)=2` : nombre de secondes que nos 20 utilisateurs vont passer pour rentrer dans le système (durée de montée de charge). Supposons que les applications que nous proposons dans notre test doivent être testées pour 10000 utilisateurs. Il n'est pas très réaliste de laisser les 10000 utilisateurs entrer dans le système en même temps. Le temps de montée en puissance détermine le nombre de secondes pendant lesquelles 10000 utilisateurs seront inclus dans le système par l'outil de test. Dans notre exemple, la valeur de 2 secondes veut dire que nos 20 utilisateurs vont mettre 2s à rentrer dans le système (donc vont effectuer une action sur le site cible à tester), ce qui fait qu'on aura 10 utilisareurs dans le système par seconde. si on n'avait mis le nombres de threads à 10000 et ramp-up à 20 secondes, Jmeter simulera 500 utilisateurs par seconde pour avoir 10000 utilisateurs actifs à la fin de ces 20 secondes. <br>
 `Loop count=1` : nombre d'itérations de ce meme test. Si cette valeur était par exemple à *2*, à la fin de notre premier cycle de tests de 20 utilisateurs, le système continuera une seconde fois pour faire rentrer encore 20 autres utilisateurs dans le système  
 
-<img src="../img/jmeter-img/configuration-thread-group.png"  width="50%">
+<img src="../img/jmeter-img/configuration-thread-group.png"  width="75%">
 
 - Ajout d'un sampler (type de requête)
 Ensuite on va rajouter une requête de type HTTP (sampler HTTP). Ce sampler nous permet d'envoyer des requêtes HTTP/HTTPS vers un serveur web  
@@ -105,7 +105,7 @@ Ensuite on va rajouter une requête de type HTTP (sampler HTTP). Ce sampler nous
 Clic-droit sur Thread Group -> Add -> Sampler -> HTTP Request
 ```
 
-<img src="../img/jmeter-img/ajout-sampler.png"  width="50%"/>
+<img src="../img/jmeter-img/ajout-sampler.png"  width="75%"/>
 
 - Configuration du sampler HTTP Request  
 
@@ -118,7 +118,7 @@ Clic-droit sur Thread Group -> Add -> Sampler -> HTTP Request
 
 On peut rajouter un autre sampler de requête HTTP pour aller faire un stress test sur la page contenant nos labs (wingufactory/lecloudfacile-devops-labs) avec les infos ci-dessous :
 
-<img src="../img/jmeter-img/configuration-sampler-http-github.png"  width="50%"/>
+<img src="../img/jmeter-img/configuration-sampler-http-github.png"  width="75%"/>
 
 
 - Ajout d'un listener
@@ -141,7 +141,7 @@ Enfin cliquer sur l'icone de sauvegarde tout en haut à gauche pour sauvegarder 
 
 <img src="../img/jmeter-img/sauvegarde-plan.png"  width="50%"/>
 
-<img src="../img/jmeter-img/sauvegarde-plan1.png"  width="50%"/>
+<img src="../img/jmeter-img/sauvegarde-plan2.png"  width="50%"/>
 
 La sauvegarde générera un fichier de type `.jmx` qui nous sera utile lors de l'étape 7 de ce lab
 
@@ -158,20 +158,23 @@ Une fois le plan sauvegardé, on peut désormais lancer nos tests de charge depu
 
 Au niveau des listeners, on pourra visualiser le résultat de nos tests
 
-- *View result tree*
+- `View result tree`
+
 Pour chaque requête de tests lancée, on peut voir le statut (succès ou echec) et les résultats en détails des envois et réponses du serveur cible
 
-<img src="../img/jmeter-img/result-tree.png"  width="50%"/>
+<img src="../img/jmeter-img/result-tree.png"  width="75%"/>
 
-- *View result in table*
+- `View result in table`
+
 Memes infos que le result tree sous format tableau. On peut voir le temps de connection de chaque requête, son temps de charge, les latence,..
 
-<img src="../img/jmeter-img/result-in-table.png"  width="50%"/>
+<img src="../img/jmeter-img/results-in-table.png"  width="75%"/>
 
-- *Summary Report*
+- `Summary Report`
+
 On peut y retrouver un résumé codensé des résultats de nos tests sous forme de tableau (le load time, % d'erreurs, nombre de paquets envoyés par secondes,...)
 
-<img src="../img/jmeter-img/summary-report.png"  width="50%"/>
+<img src="../img/jmeter-img/summary-report.png"  width="75%"/>
 
 
 ### Etape 7 : Lancement du test de charge Jmeter en mode CLI
@@ -216,16 +219,16 @@ jmeter -n -t ~/Documents/DEVOPS/LeCloudFacile/jmeter/HTTP-Request-Github-lecloud
 `-e` : spécifier à jmeter de générer un rapport à la fin des tests  
 `-o` : dossier pour sauvegarder les rapports de tests. Ce dossier ne doit pas exister ou doit être vide  
 
-<img src="../img/jmeter-img/lancement-jmeter-cli.png"  width="50%"/>
+<img src="../img/jmeter-img/lancement-jmeter-cli.png"  width="75%"/>
 
 - Visualisation des résultats
 
 Jmeter va génèrer, dans le dossier `reports`, un ensemble de fichiers avec le résulat de nos tests en format HTML  
 Double-cliquer sur le fichier `index.html` pour les visualiser  
 
-<img src="../img/jmeter-img/report-dashboard1.png"  width="50%"/>
+<img src="../img/jmeter-img/report-dashboard1.png"  width="75%"/>
 
-<img src="../img/jmeter-img/report-dashboard2.png"  width="50%"/>
+<img src="../img/jmeter-img/report-dashboard2.png"  width="75%"/>
 
 
 ## Réfèrences

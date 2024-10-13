@@ -238,6 +238,6 @@ https://medium.com/bosphorusiss/performance-and-load-testing-with-jmeter-c340dfa
 
 ## Conclusion
 
-Dans ce lab on a pu voir ensemble comment lancer des tests de charge avec l'outil Apache Jmeter en mode GUI et en mode CLI qui peut bien répondre à nos besoin de tests de charge.  
-Cependant dans un réel contexte d'entreprise et mise en oeuvre de pratiques DevOps, il sera indispensable d'aporter plus d'automatisation à cette méthode en utilisant notamment le principe de la conteneurisation.  
-Ce qu'on va découvrir dans le prochain Lab.  
+Dans ce lab on a pu voir ensemble comment se familiariser avec l'outil Apache Jmeter en mode GUI et CLI afin de répondre à nos besoins de tests de performance/charge d'une application web.    
+Cependant dans un réel contexte d'entreprise et/ou dans le cadre de la mise en oeuvre de pratiques DevOps, il sera indispensable d'apporter plus d'automatisation et de scalabilité en appliquant notamment le principe de la conteneurisation sur notre manière d'effectuer ces tests.  
+C'est ce qu'on va découvrir dans le prochain Lab.  

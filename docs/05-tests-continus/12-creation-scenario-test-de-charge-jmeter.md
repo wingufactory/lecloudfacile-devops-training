@@ -88,7 +88,7 @@ On va prendre comme scénario, un test de charge de 20 utilisateurs sur le site 
 Clic-droit sur le plan -> Add -> Thread (Users) -> Thread Group.
 ```
 
-<img src="../img/jmeter-img/creation-thread-group.png"  width="50%"/> 
+<img src="../img/jmeter-img/creation-thread-group.png"  width="75%"/> 
 
 - Configuration des threads
 
@@ -114,7 +114,7 @@ Clic-droit sur Thread Group -> Add -> Sampler -> HTTP Request
 `Protocol` : protocole d'écoute de l'application web cible. Dans notre cas *HTTPS*  
 `Server Name or Ip` : url cible de l'application à tester. dans notre cas *github.com*  
 
-<img src="../img/jmeter-img/configuration-sampler-http.png"  width="50%"/>
+<img src="../img/jmeter-img/configuration-sampler-http.png"  width="75%"/>
 
 On peut rajouter un autre sampler de requête HTTP pour aller faire un stress test sur la page contenant nos labs (wingufactory/lecloudfacile-devops-labs) avec les infos ci-dessous :
 
@@ -128,7 +128,7 @@ Pour récupérer et afficher les résulats de notre test de charge, il faudra ra
 Clic-droit sur Thread Group -> Add -> Sampler -> HTTP Request
 ```
 
-<img src="../img/jmeter-img/ajout-listener.png"  width="50%"/>
+<img src="../img/jmeter-img/ajout-listener.png"  width="75%"/>
 
 
 Dans notre exemple, on va rajouter ces listeners suivants : 
